@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Konstantin Ustyugov](https://up.htmlacademy.ru/htmlcss/34/user/1996827).
-* Наставник: `Михаил Данюшин`.
+* Наставник: [Михаил Данюшин](https://htmlacademy.ru/profile/id225742).
 
 ---
 
