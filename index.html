@@ -274,6 +274,37 @@
       </section>
     </main>
 
+    <section class="visually-hidden modal-delivery">
+      <h2>Доставка под заказ</h2>
+      <form class="delivery-form" action="https://echo.htmlacademy.ru" method="post">
+          <p>
+            <label for="name">Ваше имя:</label>
+            <input class="delivery-name" type="text" name="name" id="name" placeholder="Введите имя">
+          </p>
+          <p>
+            <label for="email">Ваш e-mail:</label>
+            <input class="delivery-email" type="email" name="email" id="email" placeholder="почта">
+          </p>
+          <p>Забавный у вас адрес</p>
+          <p>
+            <label for="question">Что нужно привезти:</label>
+            <input class="delivery-question" type="text" name="question" id="question" placeholder="В свободной форме">
+          </p>
+          <p>
+            <button class="amount-button amount-prev" type="button">
+              <span class="visually-hidden">Уменьшить число</span>
+            </button>
+            <button class="amount-button amount-next" type="button">
+              <span class="visually-hidden">Увеличить число</span>
+            </button>
+            <label for="amount">Количествоы:</label>
+            <input class="delivery-amount" type="text" name="amount" id="amount" placeholder="1">
+          </p>
+          <button class="button" type="submit">Отправить</button>
+      </form>
+      <button class="modal-close" type="button">Закрыть</button>
+    </section>
+
     <footer class="page-footer">
       <img class="footer-contacts-logo" src="#" width="200" height="80" alt="Логотип интернет магазина device">
 
@@ -333,6 +364,8 @@
         </a>
       </section>
     </footer>
+
+
 
 
   </body>
