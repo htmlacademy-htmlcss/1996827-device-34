@@ -10,7 +10,7 @@
     <header class="page-header">
       <nav class="navigation">
         <a class="page-header-logo" href="index.html">
-          <img class="header-logo" src="#" width="200" height="80" alt="Логотип интернет магазина device">
+          <img class="header-logo" src="#" width="200" height="80" alt="Логотип интернет магазина device.">
         </a>
 
         <ul class="navigation-list">
@@ -72,23 +72,24 @@
                   Поиск
                 </span>
               </label>
-              <input type="text" name="search" id="search" placeholder="Текст поиска">
+              <input type="text" name="search" id="search" placeholder="Текст поиска" required>
               <input type="submit" name="btnSearch" id="btnSearch" value="Найти">
             </form>
           </li>
           <li class="navigation-item">
             <a class="navigation-link" href="#">
-              <span>Войти</span>
+              <span class="loginin">Войти</span>
             </a>
           </li>
           <li class="navigation-item">
             <a class="navigation-link" href="#">
-              <span>Сравнить</span>
+              <span class="navigation-compare">Сравнить</span>
             </a>
           </li>
           <li class="navigation-item">
             <a class="navigation-link" href="#">
-              <span>Корзина</span>
+              <span class="navigation-recycled-amount">2</span>
+              <span class="navigation-recycled">Корзина</span>
             </a>
           </li>
         </ul>
@@ -110,54 +111,52 @@
 
         <ol class="slider-pagination">
           <li class="slider-pagination-item">
-            <img class="iddQD-pic" src="#" width="400" height="200" alt="Квадрокоптер iddQD">
-            <p class="iddQD-slogan">Порхает как бабочка,<br>
+            <img class="slider-pagination-pic" src="#" width="400" height="200" alt="Квадрокоптер «iddQD».">
+            <p class="slider-pagination-slogan">Порхает как бабочка,<br>
               жалит как пчела!</p>
-            <p  class="iddQD-text">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
-            <a class="iddQD-moreinfo" href="#">Подробнее</a>
-            <dl class="iddQD-specifications">
-              <dt>Дальность полета</dt>
-              <dd>800 м</dd>
-              <dt>Радиус поражения</dt>
-              <dd>50 м</dd>
+            <p  class="slider-pagination-text">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
+            <a class="slider-pagination-moreinfo" href="#">Подробнее</a>
+            <dl class="slider-pagination-features">
+              <dt class="slider-pagination-parameter">Дальность полета</dt>
+              <dd class="slider-pagination-metrics">800 м</dd>
+              <dt class="slider-pagination-parameter">Радиус поражения</dt>
+              <dd class="slider-pagination-metrics">50 м</dd>
             </dl>
-            <button class="slider-pagination-button slider-pagination-button-current"></button>
-            <span class="visually-hidden">1 гаджет</span>
           </li>
 
           <li class="slider-pagination-item visually-hidden">
-            <img class="bracelet-pic" src="#" width="400" height="200" alt="Браслет мотивации">
-            <p class="bracelet-slogan">Худеем<br>
+            <img class="slider-pagination-pic" src="#" width="400" height="200" alt="Браслет мотивации.">
+            <p class="slider-pagination-slogan">Худеем<br>
               правильно!</p>
-            <p  class="bracelet-text">Мотивирующие фитнес-браслеты помогу найтив себе силы не пропускать занятия и соблюдать диету.</p>
-            <a class="bracelet-moreinfo" href="#">Подробнее</a>
-            <dl class="bracelet-specifications">
-              <dt>Без подзарядки</dt>
-              <dd>48 часов</dd>
+            <p  class="slider-pagination-text">Мотивирующие фитнес-браслеты помогу найтив себе силы не пропускать занятия и соблюдать диету.</p>
+            <a class="slider-pagination-moreinfo" href="#">Подробнее</a>
+            <dl class="slider-pagination-features">
+              <dt class="slider-pagination-parameter">Без подзарядки</dt>
+              <dd class="slider-pagination-metrics">48 часов</dd>
             </dl>
-            <button class="slider-pagination-button slider-pagination-button-current"></button>
-            <span class="visually-hidden">2 гаджет</span>
           </li>
 
           <li class="slider-pagination-item visually-hidden">
-            <img class="selfieStick-pic" src="#" width="400" height="200" alt="Селфи палка">
-            <p class="selfieStick-slogan">Делай селфи,<br>
+            <img class="slider-pagination-pic" src="#" width="400" height="200" alt="Селфи палка.">
+            <p class="slider-pagination-slogan">Делай селфи,<br>
               как Бен Стиллер!</p>
-            <p  class="selfieStick-text">Самая длинная палка для селфи доступна в нашем магазине.<br>
+            <p  class="slider-pagination-text">Самая длинная палка для селфи доступна в нашем магазине.<br>
             Восемь (Восемь, Карл!) метров длинной и весом всего 5 кг.</p>
-            <a class="selfieStick-moreinfo" href="#">Подробнее</a>
-            <dl class="selfieStick-specifications">
-              <dt>Длина палки</dt>
-              <dd>8,5 м</dd>
-              <dt>Вес палки</dt>
-              <dd>8,5 м</dd>
-              <dt>Материал</dt>
-              <dd>Карбон</dd>
+            <a class="slider-pagination-moreinfo" href="#">Подробнее</a>
+            <dl class="slider-pagination-features">
+              <dt class="slider-pagination-parameter">Длина палки</dt>
+              <dd class="slider-pagination-metrics">8,5 м</dd>
+              <dt class="slider-pagination-parameter">Вес палки</dt>
+              <dd class="slider-pagination-metrics">5 кг</dd>
+              <dt class="slider-pagination-parameter">Материал</dt>
+              <dd class="slider-pagination-metrics">Карбон</dd>
             </dl>
-            <button class="slider-pagination-button slider-pagination-button-current"></button>
-            <span class="visually-hidden">3 гаджет</span>
           </li>
         </ol>
+
+        <input class="slider-pagination-button slider-pagination-button-current" type="radio" name="slider" checked>
+        <input class="slider-pagination-button" type="radio" name="slider" >
+        <input class="slider-pagination-button" type="radio" name="slider" >
       </section>
 
       <section class="main-menu">
@@ -314,16 +313,16 @@
       <form class="delivery-form" action="https://echo.htmlacademy.ru" method="post">
           <p>
             <label for="name">Ваше имя:</label>
-            <input class="delivery-name" type="text" name="name" id="name" placeholder="Введите имя">
+            <input class="delivery-name" type="text" name="name" id="name" placeholder="Введите имя" required>
           </p>
           <p>
             <label for="email">Ваш e-mail:</label>
-            <input class="delivery-email" type="email" name="email" id="email" placeholder="почта">
+            <input class="delivery-email" type="email" name="email" id="email" placeholder="почта" required>
           </p>
           <p>Забавный у вас адрес</p>
           <p>
             <label for="question">Что нужно привезти:</label>
-            <input class="delivery-question" type="text" name="question" id="question" placeholder="В свободной форме">
+            <input class="delivery-question" type="text" name="question" id="question" placeholder="В свободной форме" required>
           </p>
           <p>
             <button class="amount-button amount-prev" type="button">
@@ -359,7 +358,7 @@
 
     <footer class="page-footer">
       <a class="page-footer-logo" href="index.html">
-        <img class="footer-logo" src="#" width="200" height="80" alt="Логотип интернет магазина device">
+        <img class="footer-logo" src="#" width="200" height="80" alt="Логотип интернет магазина device.">
       </a>
 
       <section class="footer-contacts">

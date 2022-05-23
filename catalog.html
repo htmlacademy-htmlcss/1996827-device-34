@@ -10,7 +10,7 @@
     <header class="page-header">
       <nav class="navigation">
         <a class="page-header-logo" href="index.html">
-          <img class="header-logo" src="#" width="200" height="80" alt="Логотип интернет магазина device">
+          <img class="header-logo" src="#" width="200" height="80" alt="Логотип интернет магазина device.">
         </a>
 
         <ul class="navigation-list">
@@ -72,28 +72,29 @@
                   Поиск
                 </span>
               </label>
-              <input type="text" name="search" id="search" placeholder="Текст поиска">
+              <input type="text" name="search" id="search" placeholder="Текст поиска" required>
               <input type="submit" name="btnSearch" id="btnSearch" value="Найти">
             </form>
           </li>
           <li class="navigation-item">
             <a class="navigation-link" href="#">
-              <span>Коля Петухов</span>
+              <span class="user-name">Коля Петухов</span>
             </a>
           </li>
           <li class="navigation-item">
             <a class="navigation-link" href="#">
-              <span>Выйти</span>
+              <span class="logout">Выйти</span>
             </a>
           </li>
           <li class="navigation-item">
             <a class="navigation-link" href="#">
-              <span>Сравнить</span>
+              <span class="navigation-compare">Сравнить</span>
             </a>
           </li>
           <li class="navigation-item">
             <a class="navigation-link" href="#">
-              <span>Корзина</span>
+              <span class="navigation-recycled-amount">2</span>
+              <span class="navigation-recycled">Корзина</span>
             </a>
           </li>
         </ul>
@@ -124,10 +125,10 @@
           <fieldset class="catalog-filter-group">
             <legend class="catalog-filter-title">Стоимость</legend>
               <input type="range" name="rating" min="0" max="8000"  step="100" value="5000">
-                от
-                <input type="text" name="range-min" size="3" value="0">
-                до
-                <input type="text" name="range-max" size="3" value="5000">
+              от
+              <input type="text" name="range-min" size="3" value="0">
+              до
+              <input type="text" name="range-max" size="3" value="5000">
           </fieldset>
 
           <fieldset class="catalog-filter-group">
@@ -257,16 +258,16 @@
       <form class="delivery-form" action="https://echo.htmlacademy.ru" method="post">
           <p>
             <label for="name">Ваше имя:</label>
-            <input class="delivery-name" type="text" name="name" id="name" placeholder="Введите имя">
+            <input class="delivery-name" type="text" name="name" id="name" placeholder="Введите имя" required>
           </p>
           <p>
             <label for="email">Ваш e-mail:</label>
-            <input class="delivery-email" type="email" name="email" id="email" placeholder="почта">
+            <input class="delivery-email" type="email" name="email" id="email" placeholder="почта" required>
           </p>
           <p>Забавный у вас адрес</p>
           <p>
             <label for="question">Что нужно привезти:</label>
-            <input class="delivery-question" type="text" name="question" id="question" placeholder="В свободной форме">
+            <input class="delivery-question" type="text" name="question" id="question" placeholder="В свободной форме" required>
           </p>
           <p>
             <button class="amount-button amount-prev" type="button">
@@ -276,7 +277,7 @@
               <span class="visually-hidden">Увеличить число</span>
             </button>
             <label for="amount">Количествоы:</label>
-            <input class="delivery-amount" type="text" name="amount" id="amount" placeholder="1">
+            <input class="delivery-amount" type="text" name="amount" id="amount" placeholder="1" required>
           </p>
           <button class="button" type="submit">Отправить</button>
       </form>
@@ -302,7 +303,7 @@
 
     <footer class="page-footer">
       <a class="page-footer-logo" href="index.html">
-        <img class="footer-logo" src="#" width="200" height="80" alt="Логотип интернет магазина device">
+        <img class="footer-logo" src="#" width="200" height="80" alt="Логотип интернет магазина device.">
       </a>
 
       <section class="footer-contacts">
