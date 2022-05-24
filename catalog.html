@@ -4,7 +4,7 @@
     <meta name="keywords" content="VR, моноподы, экшн-камеры, квадрокоптеры">
     <meta name="description" content="Интернет магазин device">
     <meta charset="utf-8">
-    <title>HTML Academy: Девайс Каталог</title>
+    <title>Интернет магазин device. Каталог</title>
   </head>
   <body>
     <header class="page-header">
@@ -13,41 +13,56 @@
           <img class="header-logo" src="#" width="200" height="80" alt="Логотип интернет магазина device.">
         </a>
 
-        <ul class="navigation-list">
-          <li class="navigation-item">Каталог товаров
-            <ul class="visually-hidden">
-              <li>
-                <a class="navigation-link" href="#">
-                  Виртуальная реальность
-                </a>
-              </li>
-              <li>
-                <a class="navigation-link" href="#">
-                  Моноподы для cелфи
-                </a>
-              </li>
-              <li>
-                <a class="navigation-link" href="#">
-                  Экшн-камеры
-                </a>
-              </li>
-              <li>
-                <a class="navigation-link" href="#">
-                  Фитнес-браслеты
-                </a>
-              </li>
-              <li>
-                <a class="navigation-link" href="#">
-                  Умные часы
-                </a>
-              </li>
-              <li>
-                <a class="navigation-link" href="#">
-                  Квадрокоптеры
-                </a>
-              </li>
-            </ul>
+        <a class="navigation-link catalog-menu" href="catalog.html">
+          Каталог товаров
+        </a>
+
+        <button class="button catalog-menu-button" type="button">
+          <span class="catalog-menu-text visually-hidden">
+            Раскрыть каталог товаров
+          </span>
+        </button>
+
+        <ul class="catalog-menu-list">
+          <li class="catalog-menu-item">
+            <a class="catalog-menu-link" href="#">
+              Виртуальная реальность
+            </a>
           </li>
+          <li class="catalog-menu-item">
+            <a class="catalog-menu-link" href="#">
+              Моноподы для cелфи
+            </a>
+          </li>
+          <li class="catalog-menu-item">
+            <a class="catalog-menu-link" href="#">
+              Экшн-камеры
+            </a>
+          </li>
+        </ul>
+
+        <ul class="catalog-menu-list">
+          <li class="catalog-menu-item">
+            <a class="catalog-menu-link" href="#">
+              Фитнес-браслеты
+            </a>
+          </li>
+          <li class="catalog-menu-item">
+            <a class="catalog-menu-link" href="#">
+              Умные часы
+            </a>
+          </li>
+        </ul>
+
+        <ul class="catalog-menu-list">
+          <li class="catalog-menu-item">
+            <a class="catalog-menu-link" href="#">
+              Квадрокоптеры
+            </a>
+          </li>
+        </ul>
+
+        <ul class="navigation-list">
           <li class="navigation-item">
             <a class="navigation-link" href="#">
               Доставка
@@ -55,7 +70,8 @@
           </li>
           <li class="navigation-item">
             <a class="navigation-link" href="#">
-              Гарантия</a>
+              Гарантия
+            </a>
             </li>
           <li class="navigation-item">
             <a class="navigation-link" href="#">
@@ -64,44 +80,49 @@
           </li>
         </ul>
 
-        <div class="navigation-list">
-            <form action="https://echo.htmlacademy.ru/courses" method="post">
-              <label class="visually-hidden" for="search">
-                Поиск
-              </label>
-              <input type="search" name="search" id="search" placeholder="Текст поиска" required>
-              <input type="submit" name="btnSearch" id="btnSearch" placeholder="Найти">
-            </form>
+        <form class="navigation-search" action="https://echo.htmlacademy.ru/courses" method="post">
+          <label class="visually-hidden" for="search">
+            Поиск
+          </label>
+          <input type="search" name="search" id="search" placeholder="Текст поиска" required>
+          <button class="button" type="button">Найти</button>
+        </form>
 
-            <a class="navigation-link" href="#">
-              <span class="user-name">Коля Петухов</span>
+        <ul class="navigation-user-list">
+          <li class="navigation-user-item">
+            <a class="navigation-user-link" href="#">
+              Коля Петухов
             </a>
-
-            <a class="navigation-link" href="#">
-              <span class="logout">Выйти</span>
+          </li>
+          <li class="navigation-user-item">
+            <a class="navigation-user-link" href="#">
+              Выйти
             </a>
-
-            <a class="navigation-link" href="#">
-              <span class="navigation-compare">Сравнить</span>
+          </li>
+          <li class="navigation-user-item">
+            <a class="navigation-user-link" href="#">
+              Сравнить
             </a>
-
-            <a class="navigation-link" href="#">
-              <span class="navigation-recycled">Корзина</span>
+          </li>
+          <li class="navigation-user-item">
+            <a class="navigation-user-link" href="#">
+              Корзина
             </a>
-        </div>
+          </li>
+        </ul>
 
         <section class="visually-hidden modal-recycled">
           <h2  class="visually-hidden modal-delivery">Выбранный товар</h2>
           <ul>
             <li>
               <img src="#" width="50" height="50" alt="">
-              <p>Любительская селфи-палка</p>
-              <button class="modal-remove" type="button">Удалить</button>
+				      Любительская селфи-палка
+              <button class="button modal-remove" type="button">Удалить</button>
             </li>
             <li>
               <img src="#" width="50" height="50" alt="">
-              <p>Профессиональная селфи-палка</p>
-              <button class="modal-remove" type="button">Удалить</button>
+				      Профессиональная селфи-палка
+              <button class="button modal-remove" type="button">Удалить</button>
             </li>
           </ul>
           <a href="#">Открыть корзину</a>
@@ -135,7 +156,6 @@
 
             <label class="catalog-filter-range visually-hidden" for="range">Диапазон</label>
               <input type="range" name="range" id="range" min="0" max="8000"  step="100" value="5000">
-
 
             <label class="catalog-filter-range-min visually-hidden" for="range-min">от</label>
               <input type="text" name="range-min" id="range-min" size="3" value="0">
@@ -189,8 +209,8 @@
           <button class="button" type="submit">Показать</button>
         </form>
 
-        <p class="select-control-title">Сортировка:</p>
-        <select class="select-control">
+        <label class="select-control-title" for="select-control">Сортировка:</label>
+        <select class="select-control" id="select-control">
           <option value="popular">Популярные</option>
           <option value="cheap">Дешёвые</option>
           <option value="expensive">Дорогие</option>
@@ -285,12 +305,14 @@
             <button class="amount-button amount-next" type="button">
               <span class="visually-hidden">Увеличить число</span>
             </button>
-            <label for="amount">Количествоы:</label>
-            <input class="delivery-amount" type="number" name="amount" id="amount" placeholder="1" required>
+            <label for="amount">Количество:</label>
+            <input class="delivery-amount" type="number" name="amount" id="amount" placeholder="1">
           </p>
           <button class="button" type="submit">Отправить</button>
       </form>
-      <button class="modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
+      <button class="modal-close" type="button">
+        <span class="visually-hidden">Закрыть</span>
+      </button>
     </section>
 
     <footer class="page-footer">
@@ -303,20 +325,23 @@
           реки Карповки, 5, литера П.
       </address>
 
-      <section class="footer-menu">
-        <h2 class="footer-menu-title">Навигация</h2>
-        <ul class="footer-menu-list">
-          <li class="footer-menu-item">
-            <a class="footer-menu-link" href="#">Доставка</a>
+      <ul class="navigation-list">
+        <li class="navigation-item">
+          <a class="navigation-link" href="#">
+            Доставка
+          </a>
+        </li>
+        <li class="navigation-item">
+          <a class="navigation-link" href="#">
+            Гарантия
+          </a>
           </li>
-          <li class="footer-menu-item">
-            <a class="footer-menu-link" href="#">Гарантия</a>
-          </li>
-          <li class="footer-menu-item">
-            <a class="footer-menu-link" href="#">Контакты</a>
-          </li>
-        </ul>
-      </section>
+        <li class="navigation-item">
+          <a class="navigation-link" href="#">
+            Контакты
+          </a>
+        </li>
+      </ul>
 
       <a class="footer-phone-link" href="tel:+78128121212">Тел.: +7 812 812-12-12</a>
 
@@ -345,9 +370,6 @@
         <img class="htmlacademy-logo" src="#" width="200" height="80" alt="Сделано в .html academy.">
       </a>
     </footer>
-
-
-
 
   </body>
 </html>
