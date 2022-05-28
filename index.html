@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
     <meta name="keywords" content="VR, моноподы, экшн-камеры, квадрокоптеры">
     <meta name="description" content="Интернет магазин device">
     <meta charset="utf-8">
@@ -10,7 +12,7 @@
     <header class="page-header">
       <nav class="navigation">
         <a class="page-header-logo" href="index.html">
-          <img class="header-logo" src="#" width="200" height="80" alt="Логотип интернет магазина device.">
+          <img class="header-logo" src="images/logo-header.png" width="145" height="36" alt="Логотип интернет магазина device.">
         </a>
 
         <a class="navigation-link catalog-menu" href="catalog.html">
@@ -22,6 +24,7 @@
             Раскрыть каталог товаров
           </span>
         </button>
+        <img src="images/icon-plus.svg" width="50" height="50" alt="">
 
         <ul class="catalog-menu-list">
           <li class="catalog-menu-item">
@@ -84,22 +87,26 @@
           <label class="visually-hidden" for="search">
             Поиск
           </label>
+          <div class="icon-search icons"></div>
           <input type="search" name="search" id="search" placeholder="Текст поиска" required>
           <button class="button" type="submit">Найти</button>
         </form>
 
         <ul class="navigation-user-list">
           <li class="navigation-user-item">
+            <div class="icon-logon icons"></div>
             <a class="navigation-user-link" href="#">
               Войти
             </a>
           </li>
           <li class="navigation-user-item">
+            <div class="icon-compare icons"></div>
             <a class="navigation-user-link" href="#">
               Сравнить
             </a>
           </li>
           <li class="navigation-user-item">
+            <div class="icon-recycled icons"></div>
             <a class="navigation-user-link" href="#">
               Корзина
             </a>
@@ -110,12 +117,12 @@
           <h2  class="visually-hidden modal-delivery">Выбранный товар</h2>
           <ul>
             <li>
-              <img src="#" width="50" height="50" alt="">
+              <img src="images/product-1.jpg" width="39" height="43" alt="Любительская селфи-палка plt43.">
 				      Любительская селфи-палка
               <button class="button modal-remove" type="button">Удалить</button>
             </li>
             <li>
-              <img src="#" width="50" height="50" alt="">
+              <img src="images/product-2.jpg" width="39" height="43" alt="Любительская селфи-палка profft37.">
 				      Профессиональная селфи-палка
               <button class="button modal-remove" type="button">Удалить</button>
             </li>
@@ -134,13 +141,15 @@
         <button class="slider-button slider-prev" type="button">
           <span class="visually-hidden">Предыдущий гаджет</span>
         </button>
+        <img src="images/arrow-left.svg" width="20" height="60" alt="">
         <button class="slider-button slider-next" type="button">
           <span class="visually-hidden">Следующий гаджет</span>
         </button>
+        <img src="images/arrow-right.svg" width="20" height="60" alt="">
 
         <ol class="slider-pagination">
           <li class="slider-pagination-item">
-            <img class="slider-pagination-pic" src="#" width="400" height="200" alt="Квадрокоптер «iddQD».">
+            <img class="slider-pagination-pic" src="images/slider-1.png" width="560" height="560" alt="Квадрокоптер «iddQD».">
             <p class="slider-pagination-slogan">Порхает как бабочка,<br>
               жалит как пчела!</p>
             <p  class="slider-pagination-text">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
@@ -154,7 +163,7 @@
           </li>
 
           <li class="slider-pagination-item visually-hidden">
-            <img class="slider-pagination-pic" src="#" width="400" height="200" alt="Браслет мотивации.">
+            <img class="slider-pagination-pic" src="images/slider-2.png" width="560" height="560" alt="Браслет мотивации.">
             <p class="slider-pagination-slogan">Худеем<br>
               правильно!</p>
             <p  class="slider-pagination-text">Мотивирующие фитнес-браслеты помогу найтив себе силы не пропускать занятия и соблюдать диету.</p>
@@ -166,7 +175,7 @@
           </li>
 
           <li class="slider-pagination-item visually-hidden">
-            <img class="slider-pagination-pic" src="#" width="400" height="200" alt="Селфи палка.">
+            <img class="slider-pagination-pic" src="images/slider-3.png" width="560" height="560" alt="Селфи палка.">
             <p class="slider-pagination-slogan">Делай селфи,<br>
               как Бен Стиллер!</p>
             <p  class="slider-pagination-text">Самая длинная палка для селфи доступна в нашем магазине.<br>
@@ -199,37 +208,43 @@
         <ul class="main-navigation-list">
           <li class="main-navigation-item">
             <a class="main-navigation-link" href="#">
-              <img src="#" width="200" height="200" alt="">
+              <!-- <img src="#" width="200" height="200" alt=""> -->
+              <div class="icon-vr icons-catalog"></div>
               <p>Виртуальная<br> реальность</p>
             </a>
           </li>
           <li class="main-navigation-item">
             <a class="main-navigation-link" href="#">
-              <img src="#" width="200" height="200" alt="">
+              <!-- <img src="#" width="200" height="200" alt=""> -->
+              <div class="icon-monopod icons-catalog"></div>
               <p>Моноподы<br> для селфи</p>
             </a>
           </li>
           <li class="main-navigation-item">
             <a class="main-navigation-link" href="#">
-              <img src="#" width="200" height="200" alt="">
+              <!-- <img src="#" width="200" height="200" alt=""> -->
+              <div class="icon-action icons-catalog"></div>
               <p>Экшн-камера</p>
             </a>
           </li>
           <li class="main-navigation-item">
             <a class="main-navigation-link" href="#">
-              <img src="#" width="200" height="200" alt="">
+              <!-- <img src="#" width="200" height="200" alt=""> -->
+              <div class="icon-fitnes icons-catalog"></div>
               <p>Фитнес-браслеты</p>
             </a>
           </li>
           <li class="main-navigation-item">
             <a class="main-navigation-link" href="#">
-              <img src="#" width="200" height="200" alt="">
+              <!-- <img src="#" width="200" height="200" alt=""> -->
+              <div class="icon-watch icons-catalog"></div>
               <p>Умные часы</p>
             </a>
           </li>
           <li class="main-navigation-item">
             <a class="main-navigation-link" href="#">
-              <img src="#" width="200" height="200" alt="">
+              <!-- <img src="#" width="200" height="200" alt=""> -->
+              <div class="icon-copter icons-catalog"></div>
               <p>Квадрокоптеры</p>
             </a>
           </li>
@@ -254,6 +269,7 @@
           к вашему подъезду совершенно бесплатно! Ведь<br>
           мы неплохо заработаем, поднимая его на ваш этаж.
         </p>
+        <img src="images/delivery-item.png" width="136" height="164" alt="">
 
         <p class="guaranty-item-title visually-hidden">Гарантия</p>
         <p class="guaranty-item-text visually-hidden">
@@ -261,6 +277,7 @@
           сгорит дом — не переживайте, мы выдадим вам новый.<br>
           Товар, не дом, конечно же..
         </p>
+        <img src="images/guaranty-item.png" width="136" height="164" alt="">
 
         <p class="credit-item-title visually-hidden">Кредит</p>
         <p class="credit-item-text">
@@ -272,6 +289,7 @@
 
       <section class="rare-product">
         <h2 class="rare-product-title">Редкий товар под заказ</h2>
+        <img src="images/icon-car.svg" width="47" height="32" alt="">
         <p>Доставим редкий товар под заказ</p>
       </section>
 
@@ -326,12 +344,14 @@
             Подписаться
           </button>
         </form>
+        <img src="images/icons-check.svg" width="16" height="16" alt="">
         <p class="newsletter-free">Это бесплатно</p>
       </section>
     </main>
 
     <section class="visually-hidden modal-delivery">
       <h2>Доставка под заказ</h2>
+
       <form class="delivery-form" action="https://echo.htmlacademy.ru" method="post">
           <p>
             <label for="name">Ваше имя:</label>
@@ -360,12 +380,14 @@
       </form>
       <button class="modal-close" type="button">
         <span class="visually-hidden">Закрыть</span>
+        <div class="icon-closed icons"></div>
+        <!-- <img src="images/plus.svg" width="16" height="16" alt=""> -->
       </button>
     </section>
 
     <footer class="page-footer">
       <a class="page-footer-logo" href="index.html">
-        <img class="footer-logo" src="#" width="200" height="80" alt="Логотип интернет магазина device.">
+        <img class="footer-logo" src="images/logo-footer.png" width="145" height="36" alt="Логотип интернет магазина device.">
       </a>
 
       <address class="footer-contacts">
@@ -399,23 +421,26 @@
           <li class="footer-social-item">
             <a class="button" href="#">
               <span class="visually-hidden">ВКонтакте</span>
+              <div class="icon-vk icons"></div>
             </a>
           </li>
           <li class="footer-social-item">
             <a class="button" href="#">
               <span class="visually-hidden">Ютуб</span>
+              <div class="icon-youtub icons"></div>
             </a>
           </li>
           <li class="footer-social-item">
             <a class="button" href="#">
               <span class="visually-hidden">Твиттер</span>
+              <div class="icon-twitter icons"></div>
             </a>
           </li>
         </ul>
       </section>
 
       <a class="copyright-logo" href="https://htmlacademy.ru/">
-        <img class="htmlacademy-logo" src="#" width="200" height="80" alt="Сделано в .html academy.">
+        <img class="htmlacademy-logo" src="images/logo-htmlacademy.svg" width="115" height="33" alt="Сделано в .html academy.">
       </a>
     </footer>
 
