@@ -3,86 +3,85 @@
 :root {
   --basic-black: #000000;
   --basic-white: #ffffff;
-
 }
 
-.icons{
-	background: url("../images/icons-list.png");
+.icons {
+	background: url("../images/icons-list.svg");
 	width: 16px;
 	height: 16px;
 	display: inline-block;
 }
 
-.icon-search{
+.icon-search {
   background-position: -20px -182px;
 }
 
-.icon-logon{
+.icon-logon {
   background-position: -20px -81px;
 }
 
-.icon-compare{
+.icon-compare {
   background-position: -20px -250px;
 }
 
-.icon-recycled{
+.icon-recycled {
   background-position: -20px -217px;
 }
 
-.icon-closed{
+.icon-closed {
   background-position: -20px -281px;
 }
 
-.icon-vk{
+.icon-vk {
   background-position: -20px -459px;
 }
 
-.icon-youtub{
+.icon-youtub {
   background-position: -20px -429px;
 }
 
-.icon-twitter{
+.icon-twitter {
   background-position: -20px -396px;
 }
 
-.icon-up{
+.icon-up {
   background-position: -20px -367px;
 }
 
-.icon-down{
+.icon-down {
   background-position: -20px -338px;
 }
 
-.icons-catalog{
-	background: url("../images/index-catalog-list.png");
+.icons-catalog {
+	background: url("../images/index-catalog-list.svg");
 	width: 160px;
 	height: 160px;
 	display: inline-block;
 }
 
-.icon-vr{
+.icon-vr {
   /* 20 */
   background-position: -20px -20px;
 }
 
-.icon-monopod{
+.icon-monopod {
   /* 20+160+2 */
   background-position: -20px -182px;
 }
 
-.icon-action{
+.icon-action {
   /* 20+162+162 */
   background-position: -20px -344px;
 }
 
-.icon-fitnes{
+.icon-fitnes {
   background-position: -20px -506px;
 }
 
-.icon-watch{
+.icon-watch {
   background-position: -20px -668px;
 }
 
-.icon-copter{
+.icon-copter {
   background-position: -20px -830px;
 }
