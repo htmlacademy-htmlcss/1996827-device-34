@@ -91,15 +91,23 @@ img {
 }
 
 .button {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-family: "Raleway", sans-serif;
   font-size: 18px;
   line-height: 21.13px;
   font-weight: 800;
-  /* text-transform: uppercase;
-  border: none; */
+  color: var(--basic-black);
+  text-transform: uppercase;
+  border: none;
+  background: var(--basic-yellow);
+  box-shadow: 0 -16px 0 var(--basic-white) inset, 0 16px 0 var(--basic-white) inset;
 }
 
 /* BASE STYLES */
+
 .navigation-search input::placeholder {
   font-size: 16px;
   line-height: 20px;
@@ -136,6 +144,10 @@ img {
   line-height: 50px;
 }
 
+.slider-pagination-moreinfo {
+  width: 220px;
+}
+
 .slider-pagination-parameter {
   padding: 0;
   margin: 0;
@@ -168,20 +180,15 @@ img {
   align-items: flex-end;
 }
 
-.services-button:first-child > button {
-  width: 280px;
-  height: 40px;
+.services-button-item:first-child > button {
   color: var(--basic-yellow);
   background-color: var(--basic-black);
   text-transform: uppercase;
+  box-shadow: none;
 }
 
-.services-button > button {
+.services-button {
   width: 280px;
-  height: 40px;
-  color: var(--basic-black);
-  text-transform: uppercase;
-  border: none;
 }
 
 .delivery-item-title {
@@ -196,7 +203,7 @@ img {
   display: flex;
 }
 
-.rare-product > div {
+.rare-product-car {
   width: 125px;
   height: 100px;
   background-color: var(--basic-yellow);
@@ -205,11 +212,67 @@ img {
   justify-content: center;
 }
 
-.rare-product > p {
+.rare-product-title {
+  order: 1;
   margin: auto;
   font-size: 20px;
   line-height: 23.48px;
 }
+
+.rare-product-circle {
+  order: 2;
+  margin: auto 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  /* text-align: center; */
+  cursor: pointer;
+  background-color: gray;
+}
+
+
+
+
+
+
+
+
+.info-device-moreinfo {
+  width: 270px;
+  /* height: 40px; */
+}
+
+
+
+
+
+
+.contacts-button {
+  width: 260px;
+  /* height: 40px; */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
