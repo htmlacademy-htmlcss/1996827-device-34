@@ -106,7 +106,7 @@ img {
   box-shadow: 0 -16px 0 var(--basic-white) inset, 0 16px 0 var(--basic-white) inset;
 }
 
-/* BASE STYLES */
+/* BASE STYLES index */
 
 .navigation-search input::placeholder {
   font-size: 16px;
@@ -217,143 +217,134 @@ img {
   margin: auto;
   font-size: 20px;
   line-height: 23.48px;
+  text-transform: uppercase;
 }
 
 .rare-product-circle {
-  order: 2;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
   margin: auto 0;
   display: flex;
   align-items: center;
   justify-content: center;
-
-
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  /* text-align: center; */
+  order: 2;
   cursor: pointer;
-  background-color: gray;
+  background-color: var(--basic-grey);
 }
 
+.info-device-title {
+  font-size: 50px;
+  line-height: 50px;
+  text-transform: none;
+}
 
-
-
-
-
-
+.info-delivery-list {
+  line-height: 20px;
+  font-weight: 700;
+}
 
 .info-device-moreinfo {
   width: 270px;
-  /* height: 40px; */
 }
 
+.contacts-title {
+  font-size: 50px;
+  line-height: 50px;
+  text-transform: none;
+}
 
+.contacts-subtitle {
+  font-size: 24px;
+  font-weight: 700;
+}
 
-
-
+.contacts-address {
+  font-style: normal;
+}
 
 .contacts-button {
   width: 260px;
-  /* height: 40px; */
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.icons {
-	background: url("../images/icons-list.svg");
-	width: 16px;
-	height: 16px;
-	display: inline-block;
+.newsletter-title {
+  font-size: 50px;
+  line-height: 50px;
+  text-transform: none;
 }
 
-.icon-search {
-  background-position: -20px -182px;
+.newsletter-button {
+  width: 253px;
+  height: 57px;
+  box-shadow: none;
+  background-color: var(--basic-light);
 }
 
-.icon-logon {
-  background-position: -20px -81px;
+.footer-contacts,
+.footer-phone-link {
+  font-size: 16px;
+  line-height: 20px;
+  font-style: normal;
 }
 
-.icon-compare {
-  background-position: -20px -250px;
+.footer-social-item {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: auto 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: var(--basic-grey);
 }
 
-.icon-recycled {
-  background-position: -20px -217px;
+/* BASE STYLES catalog */
+
+.catalog-header-title {
+  font-size: 50px;
+  line-height: 50px;
+  text-transform: none;
 }
 
-.icon-closed {
-  background-position: -20px -281px;
+.breadcrumbs {
+  font-size: 16px;
+  line-height: 18.96px;
 }
 
-.icon-vk {
-  background-position: -20px -459px;
+.catalog-filter-title {
+  line-height: 20px;
+  font-weight: 700;
 }
 
-.icon-youtub {
-  background-position: -20px -429px;
+.catalog-filter-button {
+  width: 210px;
 }
 
-.icon-twitter {
-  background-position: -20px -396px;
+.select-control-title {
+  font-size: 16px;
+  line-height: 18.78px;
 }
 
-.icon-up {
-  background-position: -20px -367px;
+.product-card-title {
+  line-height: 20px;
+  font-weight: 700;
 }
 
-.icon-down {
-  background-position: -20px -338px;
+.product-card-price {
+  line-height: 21.33px;
 }
 
-.icons-catalog {
-	background: url("../images/index-catalog-list.svg");
-	width: 160px;
-	height: 160px;
-	display: inline-block;
+.product-list-button {
+  width: 1062px;
+  font-size: 16px;
+  line-height: 18.78px;
+  box-shadow: none;
+  background-color: var(--basic-white);
+  border: 2px solid var(--basic-grey);
 }
 
-.icon-vr {
-  /* 20 */
-  background-position: -20px -20px;
-}
-
-.icon-monopod {
-  /* 20+160+2 */
-  background-position: -20px -182px;
-}
-
-.icon-action {
-  /* 20+162+162 */
-  background-position: -20px -344px;
-}
-
-.icon-fitnes {
-  background-position: -20px -506px;
-}
-
-.icon-watch {
-  background-position: -20px -668px;
-}
-
-.icon-copter {
-  background-position: -20px -830px;
+.pagination-item {
+  font-size: 16px;
+  line-height: 20px;
 }
