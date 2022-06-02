@@ -112,10 +112,6 @@ button {
 
 /* BASE STYLES index */
 
-.navigation-search {
-  width: 517px;
-}
-
 .navigation-search input::placeholder {
   font-size: 16px;
   line-height: 1.25;
@@ -432,6 +428,10 @@ footer {
   border: 2px solid blue;
 }
 
+.navigation-search {
+  width: 517px;
+}
+
 .navigation-search,
 .user-navigation-list {
   border: 2px solid green;
@@ -482,11 +482,6 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.navigation-item:first-child {
-  width: 125px;
-  border: 2px solid blueviolet;
 }
 
 .navigation-item {
