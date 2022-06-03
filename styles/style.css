@@ -67,23 +67,17 @@ body {
   overflow: hidden;
 }
 
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
 img {
   max-width: 100%;
-  height: auto;
+  /* height: auto; */
+  display: block;
 }
 
 /* BUTTON styling guide */
-a {
+/* a {
   text-decoration: none;
   color: var(--basic-black);
-}
-
+} */
 button {
   padding: 0;
   border: none;
@@ -93,21 +87,20 @@ button {
 
 .button {
   padding: 0;
+  min-width: 10ch;
+  min-height: 40px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
   font-family: "Raleway", "Arial", sans-serif;
   font-weight: 800;
-  font-size: 18px;
   line-height: 1.22;
-  letter-spacing: 0.2em;
+  letter-spacing: 3.2px;
+  text-transform: uppercase;
   color: var(--basic-black);
   background: var(--basic-yellow);
   box-shadow: 0 -16px 0 var(--basic-white) inset, 0 16px 0 var(--basic-white) inset;
-  min-width: 10ch;
-  min-height: 40px;
-  text-align: center;
-  text-transform: uppercase;
 }
 
 /* BASE STYLES index */
@@ -122,8 +115,6 @@ button {
   display: inline-block;
   box-sizing: border-box;
   position: relative;
-  width: 500px;
-  padding-left: 100px;
 }
 
 .navigation-search::before {
@@ -140,25 +131,6 @@ button {
   right: 0;
 }
 
-.catalog-menu,
-.navigation-list,
-.slider-pagination-slogan,
-.main-navigation-list,
-.delivery-item-title,
-.info-device-title,
-.contacts-title,
-.newsletter-title,
-.catalog-header-title,
-.select-control-title,
-.pagination-prev,
-.pagination-next {
-  font-family: "Raleway", "Arial", sans-serif;
-  font-weight: 800;
-  line-height: 1.22;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-}
-
 .catalog-menu-button {
   font-family: "Raleway", 'Arial', sans-serif;
   font-weight: 400;
@@ -169,14 +141,7 @@ button {
   border-radius: 50%;
   fill: var(--basic-circle);
   border: 2px solid var(--basic-circle);
-  /* text-align: center; */
   cursor: pointer;
-}
-
-.slider-prev,
-.slider-next {
-  background-color: var(--basic-white);
-  border: none;
 }
 
 .slider-pagination {
@@ -185,33 +150,30 @@ button {
   margin: 0;
 }
 
-.slider-pagination-slogan {
-  font-size: 50px;
-  line-height: 1;
-  letter-spacing: normal;
-  text-transform: none;
-}
-
 .slider-pagination-moreinfo {
   width: 220px;
+  text-decoration: none;
+  color: var(--basic-black);
 }
 
 .slider-pagination-parameter {
-  padding: 0;
-  margin: 0;
   font-size: 16px;
 }
 
 .slider-pagination-metrics {
-  padding: 0;
   margin: 0;
   font-size: 36px;
 }
 
 .main-navigation-list {
-  line-height: 1.33;
-  text-transform: none;
-  letter-spacing: normal;
+  padding: 0;
+  margin-top: 40px;
+  list-style: none;
+  font-family: "Raleway", "Arial", sans-serif;
+  font-weight: 800;
+  line-height: 1.22;
+  display: flex;
+  justify-content: space-between;
 }
 
 .main-navigation-link {
@@ -227,6 +189,11 @@ button {
   align-items: flex-end;
 }
 
+.services-button-list {
+  list-style: none;
+  margin: 0;
+}
+
 .services-button-item:first-child > button {
   color: var(--basic-yellow);
   background-color: var(--basic-black);
@@ -234,11 +201,20 @@ button {
   box-shadow: none;
 }
 
+.services-button-item:nth-child(2) .button {
+  box-shadow: 0 -16px 0 var(--basic-light) inset, 0 16px 0 var(--basic-light) inset;
+}
+.services-button-item:nth-child(3) .button {
+  box-shadow: 0 -16px 0 var(--basic-light) inset, 0 16px 0 var(--basic-light) inset;
+}
+
 .services-button {
   width: 280px;
 }
 
 .delivery-item-title {
+  font-family: "Raleway", "Arial", sans-serif;
+  font-weight: 800;
   font-size: 50px;
   line-height: 1;
   text-transform: none;
@@ -265,7 +241,7 @@ button {
   margin: auto;
   font-size: 20px;
   line-height: 1.2;
-  letter-spacing: 0.2em;
+  letter-spacing: 3.2px;
   text-transform: uppercase;
 }
 
@@ -283,10 +259,10 @@ button {
 }
 
 .info-device-title {
+  font-family: "Raleway", "Arial", sans-serif;
+  font-weight: 800;
   font-size: 50px;
   line-height: 1;
-  letter-spacing: normal;
-  text-transform: none;
 }
 
 .info-delivery-list {
@@ -296,13 +272,15 @@ button {
 
 .info-device-moreinfo {
   width: 270px;
+  text-decoration: none;
+  color: var(--basic-black);
 }
 
 .contacts-title {
+  font-family: "Raleway", "Arial", sans-serif;
+  font-weight: 800;
   font-size: 50px;
   line-height: 1;
-  letter-spacing: normal;
-  text-transform: none;
 }
 
 .contacts-subtitle {
@@ -314,15 +292,22 @@ button {
   font-style: normal;
 }
 
+.contacts-phone {
+  text-decoration: none;
+  color: var(--basic-black);
+}
+
 .contacts-button {
   width: 260px;
+  text-decoration: none;
+  color: var(--basic-black);
 }
 
 .newsletter-title {
+  font-family: "Raleway", "Arial", sans-serif;
+  font-weight: 800;
   font-size: 50px;
   line-height: 1;
-  letter-spacing: normal;
-  text-transform: none;
 }
 
 .newsletter-button {
@@ -332,11 +317,18 @@ button {
   background-color: var(--basic-light);
 }
 
-.footer-contacts,
+.footer-contacts {
+  font-size: 16px;
+  line-height: 1.25;
+  font-style: normal;
+}
+
 .footer-phone-link {
   font-size: 16px;
   line-height: 1.25;
   font-style: normal;
+  text-decoration: none;
+  color: var(--basic-black);
 }
 
 .footer-social-item {
@@ -354,6 +346,8 @@ button {
 /* BASE STYLES catalog */
 
 .catalog-header-title {
+  font-family: "Raleway", "Arial", sans-serif;
+  font-weight: 800;
   font-size: 50px;
   line-height: 1;
   letter-spacing: normal;
@@ -375,8 +369,11 @@ button {
 }
 
 .select-control-title {
+  font-family: "Raleway", "Arial", sans-serif;
+  font-weight: 800;
   font-size: 16px;
   line-height: 1.18;
+  text-transform: uppercase;
 }
 
 .product-card-title {
@@ -442,7 +439,6 @@ footer {
   margin: 0 auto;
   padding: 0 60px;
   box-sizing: border-box;
-  /* border: 2px solid rgb(255, 0, 242); */
 }
 
 .page-header .container {
@@ -450,96 +446,95 @@ footer {
 }
 
 .page-header-logo {
+  text-decoration: none;
+  color: var(--basic-black);
   position: relative;
   top: -22px;
 }
 
 .navigation {
   width: auto;
-  /* height: 164px; */
-  /* border: 2px solid green; */
   padding-top: 20px;
 }
 
 .navigation-search {
   width: 500px;
-  /* width: auto; */
-  border: 2px solid green;
 }
-
-
 
 .user-navigation {
   margin-top: 20px;
-  /* border: 2px solid red; */
   display: flex;
   justify-content: space-between;
 }
 
 .user-navigation-list {
+  margin: 0;
+  list-style: none;
   width: 497px;
   display: flex;
   justify-content: space-between;
-  /* border: 2px solid green; */
+}
+
+.user-navigation-link {
+  text-decoration: none;
+  color: var(--basic-black);
 }
 
 .user-navigation-item:first-child {
   width: 231px;
-  /* border: 2px solid blueviolet; */
 }
 
 .user-navigation-item:nth-child(2) {
   width: 105px;
-  /* border: 2px solid blueviolet; */
 }
 
 .user-navigation-item:last-child {
   width: 99px;
-  /* border: 2px solid blueviolet; */
 }
-
 
 .site-navigation {
   margin-top: 20px;
   display: flex;
   justify-content: space-between;
-  /* border: 2px solid red; */
 }
 
 .site-navigation-catalog {
   width: 293px;
-  /* border: 2px solid green; */
 }
 
 .navigation-list {
+  margin: 0;
   width: 471px;
+  font-family: "Raleway", "Arial", sans-serif;
+  font-weight: 800;
+  line-height: 1.22;
+  letter-spacing: 3.2px;
+  text-transform: uppercase;
+  list-style: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* border: 2px solid green; */
+}
+
+.navigation-link {
+  font-family: "Raleway", "Arial", sans-serif;
+  font-weight: 800;
+  line-height: 1.22;
+  letter-spacing: 3.2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--basic-black);
 }
 
 .navigation-item {
   width: 127px;
-  /* border: 2px solid blueviolet; */
 }
-
-/* .main-index {
-  border: 2px solid blueviolet;
-} */
-
-/* .main-index h1 {
-  padding: 0;
-  margin: 0;
-} */
 
 .main-index .container {
   padding: 0;
-  /* border: 2px solid red; */
 }
 
 .big-number {
-  display: block;
   padding: 0;
   margin: 0;
   padding-right: 45px;
@@ -550,6 +545,7 @@ footer {
   line-height: 0.65;
   color: var(--basic-white);
   background-color: var(--basic-yellow);
+  display: block;
   margin-left: auto;
   text-align: end;
     /* padding-top: 50px;
@@ -559,13 +555,13 @@ footer {
 .gadget {
   display: flex;
   justify-content: space-between;
-  /* border: 2px solid red; */
 }
 
 .slider-pagination-pic {
+  list-style: none;
+  margin: 0;
   width: 560px;
   height: 350px;
-  /* border: 2px solid green; */
 }
 
 .slider-prev {
@@ -573,7 +569,6 @@ footer {
   position: relative;
   z-index: 2;
   top: 70px;
-  /* border: 2px solid green; */
 }
 
 .slider-next {
@@ -582,7 +577,6 @@ footer {
   z-index: 2;
   left: 510px;
   top: 70px;
-  /* border: 2px solid green; */
 }
 
 .slider-pagination-pic img {
@@ -596,14 +590,16 @@ footer {
 .slider-pagination-action {
   width: 560px;
   height: 350px;
-  /* border: 2px solid green; */
 }
 
 .slider-pagination-slogan {
   margin: 0;
-  padding: 0;
+  font-family: "Raleway", "Arial", sans-serif;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 1;
   position: relative;
-  top: -35px;
+  top: -30px;
 }
 
 .slider-pagination-moreinfo {
@@ -614,29 +610,39 @@ footer {
   display: inline-flex;
   flex-direction: column-reverse;
   padding-right: 20px;
-  /* border: 2px solid green; */
 }
 
+.services {
+  margin-top: 150px;
+  background-color: var(--basic-light);
+}
 
-
-
-
-
-
-
-
-
-
-
-.main-navigation-list {
-  margin-top: 40px;
+.services .container {
   display: flex;
   justify-content: space-between;
-  /* border: 2px solid red; */
- }
+}
 
- .main-navigation-item p {
-  /* border: 2px solid blueviolet; */
-  padding: 0;
-  margin: 0;
- }
+.info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.info .info-device {
+  width: 520px;
+}
+
+.info .contacts {
+  width: 532px;
+}
+
+.newsletter {
+  background-color: var(--basic-light);
+}
+
+.page-footer {
+  background-color: var(--basic-dark);
+}
+
+.page-footer .container {
+  display: flex;
+}
