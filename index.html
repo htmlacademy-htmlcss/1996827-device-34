@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/style.css">
     <meta name="keywords" content="VR, моноподы, экшн-камеры, квадрокоптеры">
@@ -21,20 +22,14 @@
               <label class="visually-hidden" for="search">
                 Поиск
               </label>
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M15.7 14.6889L12.6 11.5889C13.5 10.3889 14 8.98892 14 7.38892C14 3.48892 10.9 0.388916 7 0.388916C3.1 0.388916 0 3.48892 0 7.38892C0 11.2889 3.1 14.3889 7 14.3889C8.6 14.3889 10 13.8889 11.2 12.9889L14.3 16.0889C14.5 16.2889 14.7 16.3889 15 16.3889C15.6 16.3889 16 15.9889 16 15.3889C16 15.1889 15.9 14.8889 15.7 14.6889ZM2 7.38892C2 4.58892 4.2 2.38892 7 2.38892C9.8 2.38892 12 4.58892 12 7.38892C12 10.1889 9.8 12.3889 7 12.3889C4.2 12.3889 2 10.1889 2 7.38892Z" fill="black"/>
-              </svg>
               <input type="search" name="search" id="search" placeholder="Текст поиска" required>
               <button type="submit">Найти</button>
             </form>
 
             <ul class="user-navigation-list">
               <li class="user-navigation-item">
-                <svg width="16" height="16" viewBox="0 -3 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M0 12.3889H13C12.8 9.78892 10.9 7.58892 8.3 6.88892C9.3 6.28892 10 5.18892 10 3.88892C10 1.98892 8.4 0.388916 6.5 0.388916C4.6 0.388916 3 1.98892 3 3.88892C3 5.18892 3.7 6.28892 4.7 6.88892C2.1 7.58892 0.2 9.78892 0 12.3889Z" fill="black"/>
-                </svg>
                 <a class="user-navigation-link" href="#">
-                  Войти
+                  <img alt="логин" src="images/icon-logon.svg" width="14" height="14">&nbsp;Войти</a>
                 </a>
               </li>
               <li class="user-navigation-item">
@@ -164,7 +159,7 @@
       <div class="container">
         <h1 class="visually-hidden">Интернет магазин device</h1>
 
-        <div class="big-number"><p class="big-number-title">01</p></div>
+        <div class="big-number">01</div>
 
         <section class="gadget">
           <h2 class="visually-hidden">Топ гаджетов</h2>
@@ -177,14 +172,14 @@
               </svg>
             </button>
 
-            <!-- <img src="images/slider-1.png" width="560" height="560" alt="Квадрокоптер «iddQD»."> -->
-
             <button class="slider-next" type="button">
               <span class="visually-hidden">Следующий гаджет</span>
               <svg width="20" height="60" viewBox="0 0 20 60" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M-5.24537e-06 1.74846e-06L3.49999 1.44248e-06L20 30L3.5 60L0 60L16.2 30L-5.24537e-06 1.74846e-06Z" fill="black"/>
               </svg>
             </button>
+
+            <img src="images/slider-1.png" width="560" height="560" alt="Квадрокоптер «iddQD».">
           </div>
 
           <div class="slider-pagination-action">
@@ -208,6 +203,9 @@
                 <dl class="slider-pagination-features">
                   <dt class="slider-pagination-parameter">Дальность полета</dt>
                   <dd class="slider-pagination-metrics">800 м</dd>
+                </dl>
+
+                <dl class="slider-pagination-features">
                   <dt class="slider-pagination-parameter">Радиус поражения</dt>
                   <dd class="slider-pagination-metrics">50 м</dd>
                 </dl>
