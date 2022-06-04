@@ -9,11 +9,11 @@
     <meta charset="utf-8">
     <title>Интернет магазин device</title>
   </head>
-  <body class="page">
-    <header class="page-header">
-      <div class="container">
-        <a class="page-header-logo" href="index.html">
-          <img class="header-logo" src="images/logo-header.svg" width="145" height="36" alt="Логотип интернет магазина device.">
+  <body>
+    <header class="header-index">
+      <div class="header-container">
+        <a class="header-logo" href="index.html">
+          <img src="images/logo-header.svg" width="145" height="36" alt="Логотип интернет магазина device.">
         </a>
 
         <nav class="navigation">
@@ -54,13 +54,13 @@
           </div>
 
           <div class="site-navigation">
-            <div class="site-navigation-catalog">
+            <div class="navigation-catalog">
               <a class="navigation-link" href="catalog.html">
                 Каталог товаров
               </a>
 
               <button class="catalog-menu-button" type="button">
-                <span class="catalog-menu-text visually-hidden">
+                <span class="visually-hidden">
                   Раскрыть каталог товаров
                 </span>
                 <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
@@ -150,7 +150,7 @@
     </header>
 
     <main class="main-index">
-      <div class="container">
+      <div class="main-container">
         <h1 class="visually-hidden">Интернет магазин device</h1>
 
         <div class="big-number">01</div>
@@ -185,14 +185,15 @@
 
                 <a class="button slider-pagination-moreinfo" href="#">Подробнее</a>
 
-                <label class="slider-pagination-title visually-hidden" for="slider-pagination1">Первый гаджет</label>
-                <input class="slider-pagination-button" type="radio" name="slider" id="slider-pagination1" checked>
-
-                <label class="slider-pagination-title visually-hidden" for="slider-pagination2">Второй гаджет</label>
-                <input class="slider-pagination-button" type="radio" name="slider" id="slider-pagination2">
-
-                <label class="slider-pagination-title visually-hidden" for="slider-pagination3">Третий гаджет</label>
-                <input class="slider-pagination-button" type="radio" name="slider" id="slider-pagination3">
+                <button>
+                  <span>1</span>
+                </button>
+                <button>
+                  <span>2</span>
+                </button>
+                <button>
+                  <span>3</span>
+                </button>
 
                 <dl class="slider-pagination-features">
                   <dt class="slider-pagination-parameter">Дальность полета</dt>
@@ -315,7 +316,7 @@
       </div>
 
       <section class="services">
-        <div class="container">
+        <div class="services-container">
           <h2 class="visually-hidden">Услуги</h2>
 
           <div class="services-button-list">
@@ -404,7 +405,7 @@
             <a class="button info-device-moreinfo" href="#">Подробнее о нас</a>
           </section>
 
-          <section class="contacts">
+          <section class="info-contacts">
             <h2 class="contacts-title">Контакты</h2>
             <p class="contacts-title-text">
               Вы можете забрать товар сами, заехав в наш офис.<br>
@@ -428,24 +429,24 @@
       <section class="newsletter">
         <div class="container">
           <h2 class="newsletter-title">Подпишитесь на рассылку</h2>
-        <p class="newsletter-text">
-          Еженедельный дайджест с обзорами новинок,<br>
-          длительными тест-драйвами, распаковками, а также акци<br>
-          спецпредложения и вот это вот всё.
-        </p>
-        <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
-          <label class="visually-hidden" for="newsletter-email">Email</label>
-          <input type="email" name="newsletter-email" id="newsletter-email" class="field" placeholder="Ваш e-mail"  required>
-          <button class="button newsletter-button" type="submit">
-            Подписаться
-          </button>
-        </form>
-        <p class="newsletter-free">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M15.498 1L5.89805 10.3L1.49805 6V10.7L5.99805 15L15.498 5.7V1Z" fill="#08AF00"/>
-          </svg>
-          Это бесплатно
-        </p>
+          <p class="newsletter-text">
+            Еженедельный дайджест с обзорами новинок,<br>
+            длительными тест-драйвами, распаковками, а также акци<br>
+            спецпредложения и вот это вот всё.
+          </p>
+          <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
+            <label class="visually-hidden" for="newsletter-email">Email</label>
+            <input type="email" name="newsletter-email" id="newsletter-email" class="field" placeholder="Ваш e-mail"  required>
+            <button class="button newsletter-button" type="submit">
+              Подписаться
+            </button>
+          </form>
+          <p class="newsletter-free">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15.498 1L5.89805 10.3L1.49805 6V10.7L5.99805 15L15.498 5.7V1Z" fill="#08AF00"/>
+            </svg>
+            Это бесплатно
+          </p>
         </div>
       </section>
     </main>
@@ -484,9 +485,9 @@
       </button>
     </section>
 
-    <footer class="page-footer">
+    <footer class="footer-index">
       <div class="container">
-        <a class="page-footer-logo" href="index.html">
+        <a class="footer-logo" href="index.html">
           <img class="footer-logo" src="images/logo-footer.svg" width="145" height="36" alt="Логотип интернет магазина device.">
         </a>
 
