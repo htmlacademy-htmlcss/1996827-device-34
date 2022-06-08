@@ -85,7 +85,7 @@ img {
 
 .button {
   padding: 0;
-  min-width: 10ch;
+  min-width: 160px;
   min-height: 40px;
   display: inline-flex;
   align-items: center;
@@ -177,18 +177,6 @@ img {
 
 .user-navigation-item img {
   display: inline-block;
-}
-
-.user-navigation-item:first-child {
-  min-width: 231px;
-}
-
-.user-navigation-item:nth-child(2) {
-  min-width: 105px;
-}
-
-.user-navigation-item:last-child {
-  min-width: 99px;
 }
 
 .user-navigation-link {
