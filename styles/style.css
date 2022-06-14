@@ -114,7 +114,7 @@ img {
   text-transform: uppercase;
 }
 
-/* BASE STYLES index 555*/
+/* BASE STYLES index */
 
 .header-index {
   margin-top: 40px;
@@ -140,6 +140,8 @@ img {
 
 .user-navigation {
   margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .navigation-search {
@@ -186,6 +188,8 @@ img {
   margin: 0;
   padding: 0;
   min-width: 497px;
+  display: flex;
+  justify-content: space-between;
   list-style: none;
 }
 
@@ -200,6 +204,8 @@ img {
 
 .site-navigation {
   margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .navigation-catalog {
@@ -239,6 +245,9 @@ img {
   margin: 0;
   padding: 0;
   min-width: 471px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   font-family: "Raleway", "Arial", sans-serif;
   line-height: 1.22;
   font-weight: 800;
@@ -266,6 +275,11 @@ img {
   color: var(--basic-white);
   background-color: var(--basic-yellow);
   text-align: end;
+}
+
+.gadget {
+  display: flex;
+  justify-content: space-between;
 }
 
 .slider-pagination-pic {
@@ -334,6 +348,8 @@ img {
 
 .slider-pagination-features  {
   padding-right: 20px;
+  display: inline-flex;
+  flex-direction: column-reverse;
 }
 
 .slider-pagination-parameter {
@@ -349,6 +365,8 @@ img {
   margin: 0;
   padding: 0;
   margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
   font-family: "Raleway", "Arial", sans-serif;
   line-height: 1.22;
   font-weight: 800;
@@ -362,6 +380,9 @@ img {
 .main-navigation-link {
   min-width: 160px;
   min-height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: var(--basic-yellow);
 }
 
@@ -372,6 +393,8 @@ img {
 
 .services .container {
   padding: 0;
+  display: flex;
+  justify-content: space-between;
   background-color: var(--basic-light);
 }
 
@@ -409,6 +432,7 @@ img {
 
 .rare-product {
   margin-top: 50px;
+  display: flex;
   background-color: var(--basic-light);
 }
 
@@ -424,6 +448,9 @@ img {
 .rare-product-car {
   width: 125px;
   height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: var(--basic-yellow);
 }
 
@@ -439,6 +466,11 @@ img {
   background-color: var(--basic-grey);
   border-radius: 50%;
   cursor: pointer;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
 }
 
 .info-device {
@@ -525,7 +557,7 @@ img {
 }
 
 .newsletter-form {
-  margin-right: 578px;
+  margin-right: 568px;
   display: inline-block;
 }
 
@@ -547,6 +579,8 @@ img {
 
 .footer-index .container {
   padding: 0;
+  display: flex;
+  flex-wrap: wrap;
   color: white;
   background-color: var(--basic-dark);
 }
@@ -578,6 +612,7 @@ img {
 .footer-phone-link {
   margin-top: 50px;
   min-width: 174px;
+  align-self: center;
   font-style: normal;
   font-size: 16px;
   line-height: 1.25;
@@ -594,6 +629,7 @@ img {
 .footer-social-list {
   margin: 0;
   padding: 0;
+  display: flex;
 }
 
 .footer-social-item {
@@ -672,79 +708,3 @@ img {
   line-height: 1.25;
 }
 
-/* FLEXBOX */
-
-.user-navigation {
-  display: flex;
-  justify-content: space-between;
-}
-
-.user-navigation-list {
-  display: flex;
-  justify-content: space-between;
-}
-
-.site-navigation {
-  display: flex;
-  justify-content: space-between;
-}
-
-.navigation-list {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.gadget {
-  display: flex;
-  justify-content: space-between;
-}
-
-.slider-pagination-features  {
-  display: inline-flex;
-  flex-direction: column-reverse;
-}
-
-.main-navigation-list {
-  display: flex;
-  justify-content: space-between;
-}
-
-.main-navigation-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.services .container {
-  display: flex;
-  justify-content: space-between;
-}
-
-.rare-product {
-  display: flex;
-}
-
-.rare-product-car {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.info {
-  display: flex;
-  justify-content: space-between;
-}
-
-.footer-index .container {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.footer-phone-link {
-  align-self: center;
-}
-
-.footer-social .footer-social-list {
-  display: flex;
-}
