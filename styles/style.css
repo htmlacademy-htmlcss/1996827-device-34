@@ -574,61 +574,54 @@ img {
 
 .footer-index {
   background-color: var(--basic-dark);
-  padding-bottom: 50px;
 }
 
 .footer-index .container {
   padding: 0;
+  padding-bottom: 50px;
   display: flex;
-  flex-wrap: wrap;
   color: white;
   background-color: var(--basic-dark);
 }
 
-.footer-logo {
+.footer-column-left {
   margin-top: 50px;
-  width: 100%;
+  margin-right: 119px;
+  max-width: 240px;
+  min-height: 182px;
 }
 
 .footer-contacts {
-  min-width: 239px;
   margin-top: 50px;
-  margin-right: 119px;
+  min-width: 240px;
+  min-height: 40px;
   font-style: normal;
   font-size: 16px;
   line-height: 1.25;
 }
 
-.footer-index .navigation-list {
+.footer-left-line {
   margin-top: 50px;
-  min-width: 444px;
-  margin-right: 154px;
+  width: 80px;
+  height: 7px;
+  background-color: var(--basic-yellow-hover);
+}
+
+.footer-column-center {
+  margin-top: 160px;
+  margin-right: 183px;
+  max-width: 444px;
+  min-height: 123px;
 }
 
 .footer-index .navigation-link {
   color: white;
 }
 
-.footer-phone-link {
-  margin-top: 50px;
-  min-width: 174px;
-  align-self: center;
-  font-style: normal;
-  font-size: 16px;
-  line-height: 1.25;
-  color: var(--basic-white);
-  text-align: end;
-  text-decoration: none;
-}
-
-.footer-social {
-  margin: 0 auto;
-  margin-top: 50px;
-}
-
 .footer-social-list {
-  margin: 0;
+  margin: 30px;
   padding: 0;
+  margin-left: 160px;
   display: flex;
 }
 
@@ -644,12 +637,27 @@ img {
   margin-right: 15px;
 }
 
-.footer-social-item:last-child {
-  margin: 0;
+.footer-column-right {
+  margin-top: 160px;
+  max-width: 175px;
+  min-height: 110px;
+}
+
+.footer-phone-link {
+  /* margin-top: 50px; */
+  min-width: 174px;
+  align-self: center;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 1.25;
+  color: var(--basic-white);
+  text-align: end;
+  text-decoration: none;
 }
 
 .copyright-logo {
-  margin-top: 50px;
+  display: block;
+  margin-top: 20px;
 }
 
 /* BASE STYLES catalog */
