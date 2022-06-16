@@ -187,12 +187,12 @@
               <legend class="catalog-filter-title">Стоимость</legend>
 
               <label class="catalog-filter-range visually-hidden" for="range">Диапазон</label>
-                <input type="range" name="range" id="range" min="0" max="8000"  step="100" value="5000">
+                <input type="range" name="range" id="range" min="0" max="8000"  step="100" value="5000"><br>
 
-              <label class="catalog-filter-range-min visually-hidden" for="range-min">от</label>
+              <label class="catalog-filter-range-min" for="range-min">от</label>
                 <input type="text" name="range-min" id="range-min" size="3" value="0">
 
-              <label class="catalog-filter-range-max visually-hidden" for="range-max">до</label>
+              <label class="catalog-filter-range-max" for="range-max">до</label>
                 <input type="text" name="range-max" id="range-max" size="3" value="5000">
             </fieldset>
 
@@ -229,13 +229,12 @@
                   <input class="control-input" type="radio" name="bluetooth-group" value="bluetooth-true" id="bluetooth-true" checked>
                   <label class="control" for="bluetooth-true">Есть</label>
                 </li>
-              </ul>
-              <ul>
                 <li class="catalog-filter-item">
-                  <input class="control-input" type="radio" name="bluetooth-group" value="bluetooth-false" id="bluetooth-false">
-                  <label class="control" for="bluetooth-false">Нет</label>
+                  <input class="control-input" type="radio" name="bluetooth-group" value="bluetooth-true" id="bluetooth-true">
+                  <label class="control" for="bluetooth-true">Нет</label>
                 </li>
               </ul>
+
             </fieldset>
 
             <button class="button catalog-filter-button" type="submit">Показать</button>
@@ -282,54 +281,56 @@
                   <a class="product-card-link" href="product.html">
                     <img class="product-card-image" src="images/product-2.jpg" width="360" height="380" alt="">
                     <h3 class="product-card-title">Профессиональная селфи-палка</h3>
+                    <p class="product-card-price">1500 ₽</p>
                   </a>
-                  <p class="product-card-price">1500 ₽</p>
                 </li>
                 <li class="product-card">
                   <a class="product-card-link" href="product.html">
                     <img class="product-card-image" src="images/product-3.jpg" width="360" height="380" alt="">
                     <h3 class="product-card-title">Непотопляемая селфи-палка</h3>
+                    <p class="product-card-price">2500 ₽</p>
                   </a>
-                  <p class="product-card-price">2500 ₽</p>
                 </li>
                 <li class="product-card">
                   <a class="product-card-link" href="product.html">
                     <img class="product-card-image" src="images/product-4.jpg" width="360" height="380" alt="">
                     <h3 class="product-card-title">Селфи-палка «Следуй за мной»</h3>
+                    <p class="product-card-price">1500 ₽</p>
                   </a>
-                  <p class="product-card-price">1500 ₽</p>
                 </li>
               </ul>
 
               <button class="product-list-button" type="button">Загрузить ещё</button>
 
-              <ul class="pagination">
-                <li class="pagination-item">
-                  <a class="pagination-link pagination-prev" href="#">
-                    Назад
-                  </a>
-                </li>
-                <li class="pagination-item">
-                  <a class="pagination-link" href="#">1</a>
-                </li>
-                <li class="pagination-item">
-                  <a class="pagination-link" href="#">2</a>
-                </li>
-                <li class="pagination-item">
-                  <a class="pagination-link" href="#">3</a>
-                </li>
-                <li class="pagination-item">
-                  <a class="pagination-link">...</a>
-                </li>
-                <li class="pagination-item">
-                  <a class="pagination-link" href="#">15</a>
-                </li>
-                <li class="pagination-item">
-                  <a class="pagination-link pagination-next" href="#">
-                    Вперёд
-                  </a>
-                </li>
-              </ul>
+              <div class="column-pagination">
+                <a class="pagination-link pagination-button" href="#">
+                  Назад
+                </a>
+
+                <ul class="column-pagination-list">
+                  <li class="column-pagination-item">
+                    <a class="column-pagination-link" href="#">1</a>
+                  </li>
+                  <li class="column-pagination-item">
+                    <a class="column-pagination-link" href="#">2</a>
+                  </li>
+                  <li class="column-pagination-item">
+                    <a class="column-pagination-link" href="#">3</a>
+                  </li>
+                  <li class="column-pagination-item">
+                    <a class="column-pagination-link">...</a>
+                  </li>
+                  <li class="column-pagination-item">
+                    <a class="column-pagination-link" href="#">15</a>
+                  </li>
+                </ul>
+
+                <a class="pagination-link pagination-button" href="#">
+                  Вперёд
+                </a>
+              </div>
+
+
             </div>
 
 
