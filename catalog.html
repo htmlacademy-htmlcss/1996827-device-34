@@ -8,7 +8,7 @@
     <meta charset="utf-8">
     <title>Интернет магазин device. Каталог</title>
   </head>
-  <body class="page">
+  <body>
     <header class="header-index">
       <div class="container">
         <a class="header-logo" href="index.html">
@@ -160,7 +160,7 @@
 
     <main class="main-catalog">
 
-      <header class="catalog-header">
+
         <div class="container">
           <h1 class="catalog-header-title">Моноподы для селфи</h1>
 
@@ -176,13 +176,13 @@
             </li>
           </ul>
         </div>
-      </header>
 
       <section class="catalog-products">
         <div class="container">
           <h2 class="visually-hidden">Список товаров с фильтрами</h2>
 
           <form class="catalog-filter" action="https://echo.htmlacademy.ru" method="post">
+            <p class="catalog-subtitle">Фильтр:</p>
             <fieldset class="catalog-filter-group">
               <legend class="catalog-filter-title">Стоимость</legend>
 
@@ -250,19 +250,23 @@
                 <option value="expensive">Дорогие</option>
               </select>
 
-              <button type="button">
-                <span class="visually-hidden">По возрастанию цены</span>
-                <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M6 0L11.5 10H0.5" fill="black"/>
-                </svg>
-              </button>
+              <div class="select-button">
+                <button type="button">
+                  <span class="visually-hidden">По возрастанию цены</span>
+                  <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 0L11.5 10H0.5" fill="black"/>
+                  </svg>
+                </button>
 
-              <button type="button">
-                <span class="visually-hidden">По уменьшению цены</span>
-                <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M6 10L0.499999 9.61651e-07L11.5 0" fill="black"/>
-                </svg>
-              </button>
+                <button type="button">
+                  <span class="visually-hidden">По уменьшению цены</span>
+                  <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 10L0.499999 9.61651e-07L11.5 0" fill="black"/>
+                  </svg>
+                </button>
+              </div>
+
+
             </div>
 
             <div class="product-list">
@@ -271,8 +275,8 @@
                   <a class="product-card-link" href="product.html">
                     <img class="product-card-image" src="images/product-1.jpg" width="360" height="380" alt="">
                     <h3 class="product-card-title">Любительская селфи-палка</h3>
+                    <p class="product-card-price">500 ₽</p>
                   </a>
-                  <p class="product-card-price">500 ₽</p>
                 </li>
                 <li class="product-card">
                   <a class="product-card-link" href="product.html">
@@ -416,6 +420,5 @@
         </div>
       </div>
     </footer>
-
   </body>
 </html>
