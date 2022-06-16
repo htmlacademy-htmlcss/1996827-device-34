@@ -721,11 +721,12 @@ img {
 .breadcrumbs {
   margin: 0;
   padding: 0;
+  margin-bottom: 40px;
   display: flex;
   list-style: none;
 }
 
-.breadcrumbs-item {
+.breadcrumbs-item:not(:last-child) {
   margin-right: 20px;
 }
 
