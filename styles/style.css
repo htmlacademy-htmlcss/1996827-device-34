@@ -50,9 +50,10 @@ html {
 
 body {
   margin: 0;
+  min-width: 1440px;
+  min-height: 100%;
   display: flex;
   flex-direction: column;
-  min-height: 100%;
 }
 
 .main-wraper {
@@ -376,7 +377,6 @@ img {
 .main-navigation-list {
   margin: 0;
   padding: 0;
-  /* margin-top: 40px; */
   display: flex;
   justify-content: space-between;
   font-family: "Raleway", "Arial", sans-serif;
@@ -439,7 +439,6 @@ img {
 .services .container {
   padding: 0;
   display: flex;
-  justify-content: space-between;
   background-color: var(--basic-light);
 }
 
@@ -466,6 +465,18 @@ img {
   min-width: 280px;
 }
 
+.services-line {
+  width: 7px;
+  height: 319px;
+  background-color: var(--basic-black);
+}
+
+.delivery-item {
+  margin-left: 116px;
+  width: 452px;
+  min-height: 174px;
+}
+
 .delivery-item-title {
   font-family: "Raleway", "Arial", sans-serif;
   font-size: 50px;
@@ -473,6 +484,11 @@ img {
   font-weight: 800;
   letter-spacing: normal;
   text-transform: none;
+}
+
+.services img {
+  margin-left: auto;
+  align-self: center;
 }
 
 .rare-product {
@@ -497,8 +513,10 @@ img {
 .rare-product-title {
   width: 950px;
   min-height: 100px;
+  font-family: "Raleway", sans-serif;
   font-size: 20px;
   line-height: 1.2;
+  font-weight: 800;
   letter-spacing: 3.2px;
   text-transform: uppercase;
   border: none;
@@ -538,6 +556,12 @@ img {
   padding: 0;
   line-height: 1.2;
   font-weight: 700;
+  list-style: none;
+}
+
+.info-delivery-item::before {
+  content: "• ";
+  color: var(--basic-yellow);
 }
 
 .info-device-moreinfo {
@@ -615,11 +639,18 @@ img {
   justify-content: space-between;
 }
 
+.newsletter-form input[type="email"] {
+  margin: 0;
+  color: var(--basic-light);
+  background-color: transparent;
+}
+
 .newsletter-button {
   min-width: 253px;
   min-height: 57px;
   background-color: var(--basic-light);
   box-shadow: none;
+  border: none;
 }
 
 .footer-index {
