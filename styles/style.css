@@ -377,58 +377,35 @@ img {
 .main-navigation-list {
   margin: 0;
   padding: 0;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(6, 160px);
+  column-gap: 40px;
   font-family: "Raleway", "Arial", sans-serif;
   line-height: 1.22;
   font-weight: 800;
   list-style: none;
 }
 
-.main-navigation-item:not(:nth-child(2)) .main-navigation-link {
-  color: var(--basic-black);
-  background-image: url("../images/icon-vr.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  text-decoration: none;
-}
-
-.main-navigation-item:nth-child(2) .main-navigation-link {
-  color: var(--basic-black);
-  background-image: url("../images/icon-monopod.svg");
-  background-repeat: no-repeat;
-  background-position: bottom;
-  text-decoration: none;
-}
-
-.main-navigation-item:nth-child(3) .main-navigation-link {
-  background-image: url("../images/icon-action.svg");
-}
-
-.main-navigation-item:nth-child(4) .main-navigation-link {
-  background-image: url("../images/icon-fitnes.svg");
-}
-
-.main-navigation-item:nth-child(5) .main-navigation-link {
-  background-image: url("../images/icon-watch.svg");
-}
-
-.main-navigation-item:nth-child(6) .main-navigation-link {
-  background-image: url("../images/icon-copter.svg");
-}
-
 .main-navigation-link {
-  min-width: 160px;
-  min-height: 160px;
+  color: var(--basic-black);
+  text-decoration: none;
+}
+
+.main-navigation-img {
+  width: 160px;
+  height: 160px;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: var(--basic-yellow);
 }
 
-.main-navigation-link p {
-  position: relative;
-  top: 120px;
+.main-navigation-item:nth-child(2) .main-navigation-img {
+  align-items: flex-end;
+}
+
+.main-navigation-item:nth-child(4) p {
+  letter-spacing: -0.32px;
 }
 
 .services {
