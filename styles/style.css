@@ -833,9 +833,9 @@ img {
   margin: 0;
   padding: 70px 40px;
   width: 840px;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 360px 360px;
+  gap: 40px;
   background-color: var(--basic-white);
   list-style: none;
 }
@@ -849,14 +849,26 @@ img {
   text-decoration: none;
 }
 
+.product-card-text {
+  display: flex;
+}
+
 .product-card-title {
+  width: 226px;
+  font-size: 18px;
   line-height: 1.11;
   font-weight: 700;
   color: var(--basic-black);
 }
 
+.product-card:nth-child(4) .product-card-title {
+  letter-spacing: -0.32px;
+}
+
 .product-card-price {
+  margin-left: auto;
   line-height: 21.33px;
+  color: var(--basic-black);
 }
 
 .product-list-button {
