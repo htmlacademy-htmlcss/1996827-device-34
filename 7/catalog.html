@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+    <link rel="stylesheet" href="styles/style.css">
+    <meta name="keywords" content="VR, моноподы, экшн-камеры, квадрокоптеры">
+    <meta name="description" content="Интернет магазин device">
+    <meta charset="utf-8">
+    <title>Интернет магазин device. Каталог</title>
+    <base href="https://htmlacademy-htmlcss.github.io/1996827-device-34/7/">
+</head>
+  <body>
+    <header class="header-index">
+      <div class="container">
+        <a class="header-logo" href="index.html">
+          <img src="images/logo-header.svg" width="145" height="36" alt="Логотип интернет магазина device.">
+        </a>
+
+        <nav class="navigation">
+          <ul class="user-navigation-list">
+            <li class="user-navigation-item">
+              <form class="navigation-search" action="https://echo.htmlacademy.ru/courses" method="post">
+                <label class="visually-hidden" for="search">
+                  Поиск
+                </label>
+                <input type="search" name="search" id="search" placeholder="Текст поиска" required>
+                <button type="submit">Найти</button>
+              </form>
+            </li>
+            <li class="user-navigation-item">
+              <a class="user-navigation-link" href="#">
+                <img alt="" src="images/icon-logon.svg" width="14" height="14">
+                Коля Петухов
+              </a>
+            </li>
+            <li class="user-navigation-item">
+              <a class="user-navigation-link" href="#">
+                Выйти
+              </a>
+            </li>
+            <li class="user-navigation-item">
+              <a class="user-navigation-link" href="#">
+                <img alt="" src="images/icon-compare.svg" width="14" height="14">
+                Сравнить
+              </a>
+            </li>
+            <li class="user-navigation-item">
+              <a class="user-navigation-link" href="#">
+                <img alt="" src="images/icon-recycled.svg" width="14" height="14">
+                Корзина
+              </a>
+            </li>
+          </ul>
+
+          <div class="site-navigation">
+            <div class="navigation-catalog">
+              <a class="navigation-catalog-link" href="catalog.html">
+                Каталог товаров
+                <div class="navigation-catalog-button">
+                  <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16 7.38892H9V0.388916H7V7.38892H0V9.38892H7V16.3889H9V9.38892H16V7.38892Z" />
+                  </svg>
+                </div>
+              </a>
+
+              <ul class="navigation-catalog-submenu visually-hidden">
+                <li class="catalog-menu-item">
+                  <a class="catalog-menu-link" href="#">
+                    Виртуальная реальность
+                  </a>
+                </li>
+                <li class="catalog-menu-item">
+                  <a class="catalog-menu-link" href="#">
+                    Моноподы для cелфи
+                  </a>
+                </li>
+                <li class="catalog-menu-item">
+                  <a class="catalog-menu-link" href="#">
+                    Экшн-камеры
+                  </a>
+                </li>
+                <li class="catalog-menu-item">
+                  <a class="catalog-menu-link" href="#">
+                    Фитнес-браслеты
+                  </a>
+                </li>
+                <li class="catalog-menu-item">
+                  <a class="catalog-menu-link" href="#">
+                    Умные часы
+                  </a>
+                </li>
+                <li class="catalog-menu-item">
+                  <a class="catalog-menu-link" href="#">
+                    Квадрокоптеры
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <ul class="site-navigation-list">
+              <li class="site-navigation-item">
+                <a class="site-navigation-link" href="#">Доставка</a>
+              </li>
+              <li class="site-navigation-item">
+                <a class="site-navigation-link" href="#">Гарантия</a>
+              </li>
+              <li class="site-navigation-item">
+                <a class="site-navigation-link" href="#">Контакты</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main-catalog">
+        <div class="container">
+          <h1 class="catalog-header-title">Моноподы для селфи</h1>
+
+          <ul class="breadcrumbs">
+            <li class="breadcrumbs-item">
+              <a class="breadcrumbs-link" href="index.html">Главная</a>
+            </li>
+            <li class="breadcrumbs-item">
+              <a class="breadcrumbs-link" href="catalog.html">Каталог товаров</a>
+            </li>
+            <li class="breadcrumbs-item">
+              <a class="breadcrumbs-link">Моноподы для селфи</a>
+            </li>
+          </ul>
+        </div>
+
+      <section class="catalog-products">
+        <div class="container">
+          <h2 class="visually-hidden">Список товаров с фильтрами</h2>
+
+          <form class="catalog-filter" action="https://echo.htmlacademy.ru" method="post">
+            <p class="catalog-subtitle">Фильтр:</p>
+            <fieldset class="catalog-filter-group">
+              <legend class="catalog-filter-title">Стоимость</legend>
+
+              <label class="catalog-filter-range visually-hidden" for="range">Диапазон</label>
+                <input type="range" name="range" id="range" min="0" max="8000"  step="100" value="5000"><br>
+
+              <label class="catalog-filter-range-min" for="range-min">от</label>
+                <input type="text" name="range-min" id="range-min" size="3" value="0">
+
+              <label class="catalog-filter-range-max" for="range-max">до</label>
+                <input type="text" name="range-max" id="range-max" size="3" value="5000">
+            </fieldset>
+
+            <fieldset class="catalog-filter-group">
+              <legend class="catalog-filter-title">Цвет</legend>
+              <ul class="catalog-filter-list">
+                <li class="catalog-filter-item">
+                  <input class="control-input" type="checkbox" name="filter-black" id="filter-black" checked>
+                  <label class="control" for="filter-black">Черный</label>
+                </li>
+                <li class="catalog-filter-item">
+                  <input class="control-input" type="checkbox" name="filter-white" id="filter-white" checked>
+                  <label class="control" for="filter-white">Белый</label>
+                </li>
+                <li class="catalog-filter-item">
+                  <input class="control-input" type="checkbox" name="filter-blue" id="filter-blue">
+                  <label class="control" for="filter-blue">Синий</label>
+                </li>
+                <li class="catalog-filter-item">
+                  <input class="control-input" type="checkbox" name="filter-red" id="filter-red">
+                  <label class="control" for="filter-red">Красный</label>
+                </li>
+                <li class="catalog-filter-item">
+                  <input class="control-input" type="checkbox" name="filter-pink" id="filter-pink">
+                  <label class="control" for="filter-pink">Розовый</label>
+                </li>
+              </ul>
+            </fieldset>
+
+            <fieldset class="catalog-filter-group">
+              <legend class="catalog-filter-title">Bluetooth</legend>
+              <ul class="catalog-filter-list">
+                <li class="catalog-filter-item">
+                  <input class="control-input" type="radio" name="bluetooth-group" value="bluetooth-true" id="bluetooth-true" checked>
+                  <label class="control" for="bluetooth-true">Есть</label>
+                </li>
+                <li class="catalog-filter-item">
+                  <input class="control-input" type="radio" name="bluetooth-group" value="bluetooth-true" id="bluetooth-true">
+                  <label class="control" for="bluetooth-true">Нет</label>
+                </li>
+              </ul>
+
+            </fieldset>
+
+            <button class="button catalog-filter-button" type="submit">Показать</button>
+          </form>
+
+          <div class="catalog-column">
+            <div class="select-control">
+              <label class="select-control-title" for="select-control">Сортировка:</label>
+              <select id="select-control">
+                <option value="popular">Популярные</option>
+                <option value="cheap">Дешёвые</option>
+                <option value="expensive">Дорогие</option>
+              </select>
+
+              <div class="select-button">
+                <button type="button">
+                  <span class="visually-hidden">По возрастанию цены</span>
+                  <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 0L11.5 10H0.5" fill="black"/>
+                  </svg>
+                </button>
+
+                <button type="button">
+                  <span class="visually-hidden">По уменьшению цены</span>
+                  <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 10L0.499999 9.61651e-07L11.5 0" fill="black"/>
+                  </svg>
+                </button>
+              </div>
+
+
+            </div>
+
+            <div class="product-list">
+              <ul class="product-card-list">
+                <li class="product-card">
+                  <a class="product-card-link" href="product.html">
+                    <img class="product-card-image" src="images/product-1.jpg" width="360" height="380" alt="">
+                    <div class="product-card-text">
+                      <h3 class="product-card-title">Любительская<br> селфи-палка</h3>
+                      <p class="product-card-price">500 ₽</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="product-card">
+                  <a class="product-card-link" href="product.html">
+                    <img class="product-card-image" src="images/product-2.jpg" width="360" height="380" alt="">
+                    <div class="product-card-text">
+                      <h3 class="product-card-title">Профессиональная селфи-палка</h3>
+                      <p class="product-card-price">1500 ₽</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="product-card">
+                  <a class="product-card-link" href="product.html">
+                    <img class="product-card-image" src="images/product-3.jpg" width="360" height="380" alt="">
+                    <div class="product-card-text">
+                      <h3 class="product-card-title">Непотопляемая селфи-палка</h3>
+                      <p class="product-card-price">2500 ₽</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="product-card">
+                  <a class="product-card-link" href="product.html">
+                    <img class="product-card-image" src="images/product-4.jpg" width="360" height="380" alt="">
+                    <div class="product-card-text">
+                      <h3 class="product-card-title">Селфи-палка «Следуй за мной»</h3>
+                      <p class="product-card-price">1500 ₽</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <button class="product-list-button" type="button">Загрузить ещё</button>
+
+              <div class="column-pagination">
+                <a class="pagination-link pagination-button" href="#">
+                  Назад
+                </a>
+
+                <ul class="column-pagination-list">
+                  <li class="column-pagination-item">
+                    <a class="column-pagination-link" href="#">1</a>
+                  </li>
+                  <li class="column-pagination-item">
+                    <a class="column-pagination-link" href="#">2</a>
+                  </li>
+                  <li class="column-pagination-item">
+                    <a class="column-pagination-link" href="#">3</a>
+                  </li>
+                  <li class="column-pagination-item">
+                    <a class="column-pagination-link">...</a>
+                  </li>
+                  <li class="column-pagination-item">
+                    <a class="column-pagination-link" href="#">15</a>
+                  </li>
+                </ul>
+
+                <a class="pagination-link pagination-button" href="#">
+                  Вперёд
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer-index footer-catalog">
+      <div class="container">
+        <div class="footer-column-left">
+          <a class="footer-logo" href="index.html">
+            <img src="images/logo-footer.svg" width="145" height="36" alt="Логотип интернет магазина device.">
+          </a>
+
+          <address class="footer-contacts">
+            Санкт-Петербург, набережная<br>
+            реки Карповки, 5, литера П.
+          </address>
+
+          <div class="footer-left-line"></div>
+        </div>
+
+        <div class="footer-column-center">
+          <ul class="site-navigation-list">
+            <li class="site-navigation-item">
+              <a class="site-navigation-link" href="#">Доставка</a>
+            </li>
+            <li class="site-navigation-item">
+              <a class="site-navigation-link" href="#">Гарантия</a>
+            </li>
+            <li class="site-navigation-item">
+              <a class="site-navigation-link" href="#">Контакты</a>
+            </li>
+          </ul>
+
+          <section class="footer-social">
+            <h2 class="visually-hidden">Мы в социальных сетях</h2>
+            <ul class="footer-social-list">
+              <li class="footer-social-item">
+                <a href="https://t.me/htmlacademy">
+                  <span class="visually-hidden">Телеграм</span>
+                  <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M12.4431 0.0735832L0.623071 4.63158C-0.183596 4.95558 -0.178929 5.40558 0.475071 5.60625L3.50974 6.55292L10.5311 2.12292C10.8631 1.92092 11.1664 2.02958 10.9171 2.25092L5.2284 7.38492H5.22707L5.2284 7.38558L5.01907 10.5136C5.32574 10.5136 5.46107 10.3729 5.63307 10.2069L7.10707 8.77358L10.1731 11.0382C10.7384 11.3496 11.1444 11.1896 11.2851 10.5149L13.2977 1.02958C13.5037 0.203583 12.9824 -0.170417 12.4431 0.0735832Z"
+                      fill="#444444" />
+                  </svg>
+                </a>
+              </li>
+              <li class="footer-social-item">
+                <a href="https://www.youtube.com/user/htmlacademyru">
+                  <span class="visually-hidden">Ютуб</span>
+                  <svg width="16" height="11" viewBox="0 0 16 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M15.6671 1.67464C15.5765 1.35146 15.4 1.05887 15.1564 0.827973C14.9059 0.589975 14.5989 0.41973 14.2644 0.333306C13.0124 0.00330585 7.99641 0.00330593 7.99641 0.00330593C5.9053 -0.0204856 3.8147 0.0841556 1.73641 0.316639C1.40187 0.409448 1.09545 0.583497 0.844411 0.823306C0.597745 1.06064 0.419078 1.35331 0.325745 1.67397C0.10154 2.8818 -0.00739387 4.1082 0.000411455 5.33664C-0.00758854 6.56397 0.101078 7.78997 0.325745 8.99931C0.417078 9.31864 0.595078 9.60997 0.842411 9.84531C1.08974 10.0806 1.39774 10.2506 1.73641 10.3406C3.00508 10.67 7.99641 10.67 7.99641 10.67C10.0902 10.6938 12.1835 10.5892 14.2644 10.3566C14.5989 10.2702 14.9059 10.1 15.1564 9.86197C15.3999 9.63112 15.5762 9.33849 15.6664 9.01531C15.8965 7.80794 16.0083 6.58103 16.0004 5.35197C16.0177 4.11771 15.906 2.88502 15.6671 1.67397V1.67464ZM6.40174 7.61931V3.05464L10.5751 5.33731L6.40174 7.61931Z"
+                      fill="#444444" />
+                  </svg>
+                </a>
+              </li>
+              <li class="footer-social-item">
+                <a href="https://twitter.com/htmlacademy_ru">
+                  <span class="visually-hidden">Твиттер</span>
+                  <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M9.7 0.155143C11.2 -0.344857 12.3 0.455143 12.9 1.25514C13.4 1.05514 14 0.855143 14.6 0.655143C14.6 1.45514 14.1 2.05514 13.8 2.25514C14.5 2.45514 15 1.85514 15 1.85514C14.9 2.75514 14.1 3.55514 13.6 3.75514C13.4 10.0551 10.8 14.1551 4.7 14.0551C4.2 14.0551 4.8 14.0551 4.3 14.0551C4 14.0551 0.6 13.6551 0 12.2551C2 12.4551 3.4 11.8551 4.1 11.1551C3.3 10.8551 1.7 10.7551 1.5 8.35514C1.8 8.55514 2 8.65514 2.6 8.55514C1.5 7.75514 0.3 7.05514 0.4 5.05514C0.7 5.35514 1.3 5.55514 1.6 5.45514C1 5.25514 -0.2 2.35514 0.8 0.855143C2.4 2.55514 4.1 4.25514 7.1 4.35514C7.3 2.25514 8.1 0.855143 9.7 0.155143Z"
+                      fill="#444444" />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </section>
+        </div>
+
+        <div class="footer-column-right">
+          <a class="footer-phone-link" href="tel:+78128121212">Тел.: +7 812 812-12-12</a>
+
+          <a class="copyright-logo" href="https://htmlacademy.ru/">
+            <img class="htmlacademy-logo" src="images/logo-htmlacademy.svg" width="115" height="33"
+              alt="Сделано в .html academy.">
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
