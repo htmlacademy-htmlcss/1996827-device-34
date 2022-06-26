@@ -115,8 +115,10 @@ img {
   color: var(--basic-black);
   background: var(--basic-yellow);
   box-shadow: 0 -16px 0 var(--basic-white) inset, 0 16px 0 var(--basic-white) inset;
+  border: none;
   text-align: center;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 /* BASE STYLES index */
@@ -226,9 +228,10 @@ img {
 }
 
 .navigation-catalog {
-  width: 293px;
+  margin-top: 33px;
+  /* width: 293px; */
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
 }
 
@@ -251,9 +254,14 @@ img {
   text-transform: uppercase;
 }
 
+.navigation-catalog-button {
+  margin-left: 18px;
+}
+
 .site-navigation-list {
   margin: 0;
   padding: 0;
+  margin-top: 35px;
   width: 471px;
   display: grid;
   grid-template-columns: repeat(3,  127px);
@@ -291,7 +299,7 @@ img {
 
 .big-number {
   padding-top: 80px;
-  padding-bottom: 85px;
+  padding-bottom: 20px;
   width: 100%;
   height: 135px;
   background-color: var(--basic-yellow);
@@ -386,10 +394,12 @@ img {
 }
 
 .slider-pagination-text {
-  margin-top: 46px;
+  margin-top: 0px;
 }
 
 .slider-pagination-moreinfo {
+  margin-top: 30px;
+  margin-left: 2px;
   min-width: 220px;
   margin-right: 240px;
   color: var(--basic-black);
@@ -399,12 +409,14 @@ img {
 .slider-pagination-button {
   padding: 0;
   margin: 0;
+  margin-left: 16px;
   width: 12px;
   height: 12px;
   display: inline-block;
   border: 2px solid var(--basic-black);
   background-color: var(--basic-white);
   border-radius: 50%;
+  vertical-align: middle;
 }
 
 .slider-pagination-activ {
@@ -412,23 +424,32 @@ img {
 }
 
 .slider-pagination-features {
-  padding-right: 20px;
+  margin: 0;
+  padding: 0;
+  margin-top: 20px;
+  padding-right: 17px;
   display: inline-flex;
   flex-direction: column-reverse;
 }
 
 .slider-pagination-parameter {
+  margin: 0;
+  padding: 0;
+  margin-top: 12px;
   font-size: 16px;
 }
 
 .slider-pagination-metrics {
   margin: 0;
+  padding: 0;
+  padding-top: 30px;
   font-size: 36px;
 }
 
 .main-navigation-list {
   margin: 0;
   padding: 0;
+  margin-top: 63px;
   display: grid;
   grid-template-columns: repeat(6, 160px);
   column-gap: 40px;
@@ -479,6 +500,10 @@ img {
 .main-navigation-link {
   color: var(--basic-black);
   text-decoration: none;
+}
+
+.main-navigation-link p {
+  margin-top: 28px;
 }
 
 .main-navigation-item:nth-child(4) p {
