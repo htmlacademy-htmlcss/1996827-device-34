@@ -667,10 +667,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
   list-style: none;
 }
 
-
-
-
-.main-navigation-item::before {
+.square::before {
   content: '';
   display: inline-block;
   width: 160px;
@@ -680,66 +677,41 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
   background-position: center;
 }
 
-.main-navigation-item:hover:before {
+.main-navigation-item .square:hover:before {
   background-color: var(--basic-yellow-hover);
 }
 
-.main-navigation-item:active:before {
+.main-navigation-item .square:active:before {
   opacity: 0.3;
 }
 
-
-.main-navigation-item {
-  position: relative;
-  width: 160px;
-  height: 253px;
-}
-
-.main-navigation-link:focus:before {
+.main-navigation-link:focus {
   display: block;
-  position: absolute;
-  width: 160px;
-  height: 253px;
-  border: 2px solid red;
   outline: 2px solid var(--focus);
-  background-color: red;
-  color: red;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-.main-navigation-item:nth-child(1)::before {
+.main-navigation-item:nth-child(1) .square::before {
   background-image: url("../images/icon-vr.svg");
 }
 
-.main-navigation-item:nth-child(2)::before {
+.main-navigation-item:nth-child(2) .square::before {
   background-image: url("../images/icon-monopod.svg");
   background-position: bottom;
 }
 
-.main-navigation-item:nth-child(3)::before {
+.main-navigation-item:nth-child(3) .square::before {
   background-image: url("../images/icon-action.svg");
 }
 
-.main-navigation-item:nth-child(4)::before {
+.main-navigation-item:nth-child(4) .square::before {
   background-image: url("../images/icon-fitnes.svg");
 }
 
-.main-navigation-item:nth-child(5)::before {
+.main-navigation-item:nth-child(5) .square::before {
   background-image: url("../images/icon-watch.svg");
 }
 
-.main-navigation-item:nth-child(6)::before {
+.main-navigation-item:nth-child(6) .square::before {
   background-image: url("../images/icon-copter.svg");
 }
 
