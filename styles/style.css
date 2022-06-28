@@ -55,8 +55,8 @@
   --button1-disable-color: #b3b3b3;
   --button1-disable-bgcolor: #fff6d9;
 
-  --button-headre-hover: #665a33;
-  --button-headre-active: #b39e59;
+  --button-header-hover: #665a33;
+  --button-header-active: #b39e59;
 
 }
 
@@ -203,6 +203,21 @@ img {
   background-position: 13px 11px;
 }
 
+.search-input:focus {
+  outline: 2px solid var(--focus);
+}
+
+.search-input:disabled {
+  opacity: 0.3;
+}
+
+input[type="search"]::-ms-clear {  display: none; width : 0; height: 0; }
+input[type="search"]::-ms-reveal {  display: none; width : 0; height: 0; }
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { display: none; }
+
 .search-button {
   padding: 10px;
   width: 159px;
@@ -221,6 +236,22 @@ img {
   cursor: pointer;
 }
 
+.search-button:hover {
+  color: var(--basic-white);
+  background-color: var(--basic-black);
+}
+
+.search-button:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.search-button:focus {
+  outline: 2px solid var(--focus);
+}
+
+.search-button:disabled {
+  opacity: 0.3;
+}
 
 .user-navigation-list {
   margin: 0;
@@ -281,16 +312,30 @@ img {
 	position: absolute;
 	left: 0;
   bottom: 1px;
-  color: var(--button-headre-active);
+  color: var(--button-header-active);
 	background-color: var(--basic-black);
 }
 
 .user-navigation-link:hover  {
-  color: var(--button-headre-hover);
+  color: var(--button-header-hover);
+}
+
+.user-navigation-link:active {
+  color: var(--button-header-active);
 }
 
 .user-navigation-link:focus {
   outline: 2px solid var(--focus);
+}
+
+.user-navigation-item:last-child:hover span {
+  opacity: 0,6;
+  background-color: #fff3cc;
+}
+
+.user-navigation-item:last-child:active span {
+  opacity: 0,2;
+  background-color: #ffeaa5;
 }
 
 /* навигация сайта в хедере */
@@ -318,6 +363,74 @@ img {
 
 .navigation-catalog-button {
   margin-left: 16px;
+  width: 50px;
+  height: 50px;
+  font-family: "Raleway", 'Arial', sans-serif;
+  font-size: 24px;
+  line-height: 1.25;
+  font-weight: 400;
+  background-color: transparent;
+  border: 2px solid var(--active-header-logo);
+  border-radius: 50%;
+  fill: var(--active-header-logo);
+  cursor: pointer;
+  position: relative;
+}
+
+.navigation-catalog-button::before {
+  position: absolute;
+  width: 2px;
+	height: 17px;
+	content: '';
+  left: 22px;
+  top: 16px;
+  color: var(--active-header-logo);
+	background-color: var(--active-header-logo);
+}
+
+.navigation-catalog-button::after {
+  position: absolute;
+  width: 17px;
+	height: 2px;
+	content: '';
+  left: 15px;
+  top: 24px;
+  color: var(--active-header-logo);
+	background-color: var(--active-header-logo);
+}
+
+.navigation-catalog-button:active::before {
+  color: var(--basic-black);
+	background-color: var(--basic-yellow);
+}
+
+.navigation-catalog-button:active::after {
+  color: var(--basic-black);
+	background-color: var(--basic-black);
+}
+
+.navigation-catalog-button:hover::before {
+  color: var(--basic-black);
+	background-color: var(--basic-yellow);
+}
+
+.navigation-catalog-button:hover:after {
+  color: var(--basic-black);
+	background-color: var(--basic-black);
+}
+
+.navigation-catalog-button:hover {
+  border: 2px solid var(--basic-black);
+  fill: var(--basic-black);
+}
+
+.navigation-catalog-button:active {
+  border: 2px solid var(--basic-black);
+  fill: var(--basic-black);
+}
+
+.navigation-catalog-link:focus {
+  outline: 2px solid var(--focus);
 }
 
 .site-navigation-list {
@@ -352,30 +465,28 @@ img {
   position: relative;
 }
 
-.site-navigation-link:active:before  {
+.site-navigation-link:active:before {
   width: 100%;
 	height: 2px;
 	content: '';
 	position: absolute;
 	left: 0;
   bottom: 1px;
-  color: var(--button-headre-active);
+  color: var(--button-header-active);
 	background-color: var(--basic-black);
 }
 
 .site-navigation-link:hover  {
-  color: var(--button-headre-hover);
+  color: var(--button-header-hover);
+}
+
+.site-navigation-link:active {
+  color: var(--button-header-active);
 }
 
 .site-navigation-link:focus {
   outline: 2px solid var(--focus);
 }
-
-
-
-
-
-
 
 /* пагинация на главной */
 
@@ -556,6 +667,9 @@ img {
   list-style: none;
 }
 
+
+
+
 .main-navigation-item::before {
   content: '';
   display: inline-block;
@@ -565,6 +679,44 @@ img {
   background-repeat: no-repeat;
   background-position: center;
 }
+
+.main-navigation-item:hover:before {
+  background-color: var(--basic-yellow-hover);
+}
+
+.main-navigation-item:active:before {
+  opacity: 0.3;
+}
+
+
+.main-navigation-item {
+  position: relative;
+  width: 160px;
+  height: 253px;
+}
+
+.main-navigation-link:focus:before {
+  display: block;
+  position: absolute;
+  width: 160px;
+  height: 253px;
+  border: 2px solid red;
+  outline: 2px solid var(--focus);
+  background-color: red;
+  color: red;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 .main-navigation-item:nth-child(1)::before {
   background-image: url("../images/icon-vr.svg");
@@ -590,6 +742,11 @@ img {
 .main-navigation-item:nth-child(6)::before {
   background-image: url("../images/icon-copter.svg");
 }
+
+
+
+
+
 
 .main-navigation-link {
   color: var(--basic-black);
@@ -949,7 +1106,7 @@ img {
   background: var(--button1-active);
 	border: none;
 	box-shadow:none;
-	transition: background-size 0,1s ease;
+	transition: background-size 0.1s ease;
 }
 
 .contacts-button:focus {
