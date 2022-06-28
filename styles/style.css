@@ -29,7 +29,7 @@
 :root {
   --basic-black: #000000;
   --basic-dark: #444444;
-  --basic-circle: #B3B3B3;
+
   --basic-grey: #dcdcdc;
   --basic-grey-rare: #e6e6e6;
   --basic-gray-light: #ebebeb;
@@ -39,10 +39,25 @@
   --basic-white: #ffffff;
   --basic-yellow: #ffe17f;
   --basic-yellow-hover: #ffc700;
-  --basic-violet: #af4fff;
   --basic-error: #ff3d3d;
   --basic-warning: #fd912e;
   --basic-success: #08af00;
+
+  --hover-header-logo: #666666;
+  --hover-footer-logo: #ffdd66;
+  --active-header-logo: #B3B3B3;
+  --active-footer-logo: #ffefb3;
+  --focus: #af4fff;
+  --focus-active: rgba(175, 79, 255, 1);
+
+  --button1-hover: #ffe17f;
+  --button1-active: #ffcc33;
+  --button1-disable-color: #b3b3b3;
+  --button1-disable-bgcolor: #fff6d9;
+
+  --button-headre-hover: #665a33;
+  --button-headre-active: #b39e59;
+
 }
 
 /* FLEXBOX Sticky Footer */
@@ -144,6 +159,18 @@ img {
   cursor: pointer;
 }
 
+.header-logo:hover {
+  opacity: 0.6;
+}
+
+.header-logo:active {
+  opacity: 0.3;
+}
+
+.header-logo:focus {
+  outline: 2px solid var(--focus);
+}
+
 /* навигация для пользователя */
 
 .navigation-rowup {
@@ -243,6 +270,28 @@ img {
   margin-left: -13px;
 }
 
+.user-navigation-link {
+  position: relative;
+}
+
+.user-navigation-link:active:before  {
+  width: 100%;
+	height: 2px;
+	content: '';
+	position: absolute;
+	left: 0;
+  bottom: 1px;
+  color: var(--button-headre-active);
+	background-color: var(--basic-black);
+}
+
+.user-navigation-link:hover  {
+  color: var(--button-headre-hover);
+}
+
+.user-navigation-link:focus {
+  outline: 2px solid var(--focus);
+}
 
 /* навигация сайта в хедере */
 
@@ -298,6 +347,35 @@ img {
   text-decoration: none;
   color: var(--basic-black);
 }
+
+.site-navigation-link {
+  position: relative;
+}
+
+.site-navigation-link:active:before  {
+  width: 100%;
+	height: 2px;
+	content: '';
+	position: absolute;
+	left: 0;
+  bottom: 1px;
+  color: var(--button-headre-active);
+	background-color: var(--basic-black);
+}
+
+.site-navigation-link:hover  {
+  color: var(--button-headre-hover);
+}
+
+.site-navigation-link:focus {
+  outline: 2px solid var(--focus);
+}
+
+
+
+
+
+
 
 /* пагинация на главной */
 
@@ -388,6 +466,29 @@ img {
   margin-left: 2px;
   min-width: 220px;
   color: var(--basic-black);
+}
+
+.slider-pagination-moreinfo:hover {
+  background: var(--button1-hover);
+	border: none;
+	box-shadow: none;
+	transition: background-size 0.1s ease;
+}
+
+.slider-pagination-moreinfo:active {
+  background: var(--button1-active);
+	border: none;
+	box-shadow: none;
+	transition: background-size 0.1s ease;
+}
+
+.slider-pagination-moreinfo:focus {
+  outline: 2px solid var(--focus);
+}
+
+.slider-pagination-moreinfo:disabled {
+  color: var(--button1-disable-color);
+  background-color: var(--button1-disable-bgcolor);
 }
 
 .slider-pagination-button {
@@ -738,7 +839,29 @@ img {
 .info-device-moreinfo {
   padding-left: 4px;
   min-width: 270px;
+}
 
+.info-device-moreinfo:hover {
+  background: var(--button1-hover);
+	border: none;
+	box-shadow:none;
+	transition: background-size 0.1s ease;
+}
+
+.info-device-moreinfo:active {
+  background: var(--button1-active);
+	border: none;
+	box-shadow:none;
+	transition: background-size 0.1s ease;
+}
+
+.info-device-moreinfo:focus {
+  outline: 2px solid var(--focus);
+}
+
+.info-device-moreinfo:disabled {
+  color: var(--button1-disable-color);
+  background-color: var(--button1-disable-bgcolor);
 }
 
 /* контакты */
@@ -813,6 +936,29 @@ img {
   margin-top: 29px;
   margin-left: 1px;
   min-width: 260px;
+}
+
+.contacts-button:hover {
+  background: var(--button1-hover);
+	border: none;
+	box-shadow:none;
+	transition: background-size 0.1s ease;
+}
+
+.contacts-button:active {
+  background: var(--button1-active);
+	border: none;
+	box-shadow:none;
+	transition: background-size 0,1s ease;
+}
+
+.contacts-button:focus {
+  outline: 2px solid var(--focus);
+}
+
+.contacts-button:disabled {
+  color: var(--button1-disable-color);
+  background-color: var(--button1-disable-bgcolor);
 }
 
 /* рассылка */
@@ -914,6 +1060,19 @@ img {
   width: 240px;
   min-height: 182px;
 }
+
+.footer-logo:hover {
+  opacity: 0.6;
+}
+
+.footer-logo:active {
+  opacity: 0.3;
+}
+
+.footer-logo:focus {
+  outline: 2px solid var(--focus);
+}
+
 
 .footer-contacts {
   margin-top: 27px;
@@ -1181,7 +1340,7 @@ img {
   align-items: center;
   font-size: 16px;
   line-height: 1.25;
-  color: var(--basic-circle);
+  color: var(--active-header-logo);
   text-decoration: none;
 }
 
