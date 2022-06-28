@@ -252,8 +252,22 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
   color: rgba(255, 255, 255, 0.3);
 }
 
-.search-button:focus {
+.search-button {
+  position: relative;
+}
+
+.navigation-search .sbutton:focus-within {
   outline: none;
+}
+
+.search-button:focus:before {
+  width: 164px;
+  height: 48px;
+  position: absolute;
+  content: '';
+  top: -6px;
+  left: -2px;
+  border: 2px solid var(--focus);
 }
 
 .search-button:disabled {
