@@ -872,16 +872,6 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
   list-style: none;
 }
 
-.services-button-list::after {
-  width: 7px;
-  height: 320px;
-  position: absolute;
-  content: "";
-  top: -65px;
-  right: -6px;
-  background-color: var(--basic-black);
-}
-
 .services-button-item:first-child > button {
   padding-left: 16px;
   width: 280px;
@@ -898,6 +888,86 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
   border: none;
   box-shadow: 0 -16px 0 var(--basic-light) inset, 0 16px 0 var(--basic-light) inset;
 }
+
+/* расдвигаем полоску на кнопке */
+
+.services-button-item:not(:first-child) .services-button:hover {
+  background: var(--button1-hover);
+	border: none;
+	box-shadow: none;
+	transition: background-size 0.1s ease;
+}
+
+.services-button-item:not(:first-child) .services-button:active {
+  background: var(--button1-active);
+	border: none;
+	box-shadow: none;
+	transition: background-size 0.1s ease;
+}
+
+.services-button-item:not(:first-child) .services-button:focus {
+  outline: 2px solid var(--focus);
+}
+
+.services-button-item:not(:first-child) .services-button:disabled {
+  color: var(--button1-disable-color);
+  background-color: var(--button1-disable-bgcolor);
+}
+
+/* стиль для services-button-activ */
+
+
+
+
+.services-button-activ:focus {
+  outline: none;
+  position: relative;
+}
+
+/* фокус активной кнопки в даставке */
+
+.services-button-activ:focus:before {
+  width: 278px;
+  height: 40px;
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  outline: 2px solid var(--focus);
+}
+
+
+
+
+
+
+
+
+
+
+
+.services-button-list::after {
+  width: 7px;
+  height: 320px;
+  position: absolute;
+  content: "";
+  top: -65px;
+  right: -7px;
+  background-color: var(--basic-black);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .delivery-item-list {
   margin: 0;
