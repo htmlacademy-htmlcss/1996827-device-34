@@ -914,11 +914,6 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
   background-color: var(--button1-disable-bgcolor);
 }
 
-/* стиль для services-button-activ */
-
-
-
-
 .services-button-activ:focus {
   outline: none;
   position: relative;
@@ -936,15 +931,13 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
   outline: 2px solid var(--focus);
 }
 
+.services-button-item:first-child .services-button-activ:hover {
+  color: rgba(255, 225, 127, 0.5);
+}
 
-
-
-
-
-
-
-
-
+.services-button-item:first-child .services-button-activ:active {
+  color: rgba(255, 225, 127, 0.3);
+}
 
 .services-button-list::after {
   width: 7px;
