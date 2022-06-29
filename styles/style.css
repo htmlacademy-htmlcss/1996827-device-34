@@ -705,16 +705,24 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
   margin: 0;
   width: 12px;
   height: 12px;
+  display: block;
+  position: relative;
   box-sizing: border-box;
   border: 2px solid var(--basic-black);
   background-color: var(--basic-white);
   border-radius: 50%;
-  position: relative;
+}
+
+.slider-pagination-item:first-child .slider-pagination-button {
+  border: 2px solid var(--basic-black);
+  background-color: var(--basic-black);
 }
 
 .slider-pagination-button:focus {
   outline: none;
 }
+
+/* фокус круглых кнопок в пагинации */
 
 .slider-pagination-button:focus:before {
   width: 12px;
@@ -723,47 +731,18 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
   content: '';
   top: -2px;
   left: -2px;
-  box-sizing: border-box;
   outline: 2px solid var(--focus);
 }
 
-
-
-
-
-
-
-
-.slider-pagination-button:hover {
+.slider-pagination-item:first-child .slider-pagination-button:hover {
   background-color: var(--basic-dark);
   border: 2px solid var(--basic-dark);
 }
 
-.slider-pagination-button:active {
+.slider-pagination-item:first-child .slider-pagination-button:active {
   background-color: var(--active-header-logo);
   border: 2px solid var(--active-header-logo);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .slider-pagination-features {
   margin: 0;
