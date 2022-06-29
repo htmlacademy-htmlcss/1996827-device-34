@@ -1009,28 +1009,14 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 
 .rare-product {
   margin-top: 70px;
-  display: flex;
-  align-items: center;
-  background-color: var(--basic-light);
 }
 
-.rare-product-car {
-  width: 125px;
+.rare-button {
+  margin: 0;
+  padding: 0;
+  width: 1160px;
   height: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--basic-yellow);
-  background-image: url("../images/icon-car.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.rare-product-title {
-  padding-left: 10px;
-  padding-top: 7px;
-  width: 910px;
-  height: 100px;
+  position: relative;
   font-family: 'Raleway';
   font-size: 20px;
   line-height: 23px;
@@ -1039,31 +1025,46 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
   font-style: normal;
   text-transform: uppercase;
   border: none;
+
+  padding-bottom: 14px;
+  padding-left: 55px;
 }
 
-.rare-product-circle {
-  margin: 0;
-  padding: 0;
+.rare-button svg {
+  position: relative;
+  top: 10px;
+  right: -225px;
+}
+
+.rare-button::before {
   width: 125px;
   height: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--basic-light);
-  cursor: pointer;
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  background-color: var(--basic-yellow);
+  background-image: url("../images/icon-car.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
 }
 
-.rare-product-i {
-  margin: 0;
-  padding: 0;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--basic-grey-rare);
-  border-radius: 50%;
-  cursor: pointer;
+/* состояния кнопки rare-button  */
+
+.rare-button:hover::before {
+  background-color: var(--basic-yellow-hover);
+}
+
+.rare-button:hover .icon-delivery-i {
+  opacity: 1;
+}
+
+.rare-button:active {
+  opacity: 0.4;
+}
+
+.rare-button:focus {
+  outline: 2px solid var(--focus);
 }
 
 /* о нас */
