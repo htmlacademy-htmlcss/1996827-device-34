@@ -1334,6 +1334,13 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
   line-height: 30px;
 }
 
+.newsletter-email:focus {
+  border: none;
+  outline: none;
+  color: var(--basic-black);
+  border-bottom: 3px solid var(--basic-grey-border);
+}
+
 .newsletter-button {
   padding: 15px 37px;
   width: 253px;
@@ -1412,10 +1419,39 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
   display: grid;
   grid-template-columns: repeat(3,  121px);
   column-gap: 35px;
+
+  position: relative;
 }
+
+/* состояния кнопок в меню footera  */
 
 .footer-index .site-navigation-link {
   color: var(--basic-white);
+}
+
+.footer-index .site-navigation-link:hover {
+  color: var(--basic-yellow-hover);
+}
+
+.footer-index .site-navigation-link:hover::before {
+  width: 100%;
+	height: 2px;
+	content: '';
+	position: absolute;
+	left: 0;
+  bottom: 1px;
+  color: var(--basic-yellow-hover);
+  background-color: var(--basic-yellow-hover);
+}
+
+.footer-index .site-navigation-link:active {
+  color: var(--basic-yellow-hover);
+  opacity: 0.3;
+}
+
+.footer-index .site-navigation-link:focus {
+  outline: 2px solid var(--focus);
+
 }
 
 .footer-social {
