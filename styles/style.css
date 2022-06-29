@@ -561,6 +561,23 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
   background-color: transparent;
   border: none;
   cursor: pointer;
+  fill: var(--basic-black);
+}
+
+.slider-prev svg {
+  fill: var(--basic-black);
+}
+
+.slider-prev svg:hover {
+  fill: rgba(0, 0, 0, 0.6);
+}
+
+.slider-prev svg:active {
+  fill: rgba(0, 0, 0, 0.3);
+}
+
+.slider-prev:focus {
+  outline: 2px solid var(--focus);
 }
 
 .slider-next {
@@ -573,6 +590,22 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
   background-color: transparent;
   border: none;
   cursor: pointer;
+}
+
+.slider-next svg {
+  fill: var(--basic-black);
+}
+
+.slider-next svg:hover {
+  fill: rgba(0, 0, 0, 0.6);
+}
+
+.slider-next svg:active {
+  fill: rgba(0, 0, 0, 0.3);
+}
+
+.slider-next:focus {
+  outline: 2px solid var(--focus);
 }
 
 .slider-pagination-pic img {
@@ -649,25 +682,88 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
   background-color: var(--button1-disable-bgcolor);
 }
 
+.pagination-row-middle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slider-pagination-list {
+  padding: 0;
+  margin: 0;
+  margin-top: 28px;
+  display: flex;
+  list-style: none;
+}
+
+.slider-pagination-item {
+  margin-left: 20px;
+}
+
 .slider-pagination-button {
   padding: 0;
   margin: 0;
-  margin-left: 20px;
   width: 12px;
   height: 12px;
-  display: inline-block;
-  position: relative;
-  top: -4px;
-  right: -9px;
+  box-sizing: border-box;
   border: 2px solid var(--basic-black);
   background-color: var(--basic-white);
   border-radius: 50%;
+  position: relative;
 }
 
-.slider-pagination-activ {
-  margin-left: 240px;
-  background-color: var(--basic-black);
+.slider-pagination-button:focus {
+  outline: none;
 }
+
+.slider-pagination-button:focus:before {
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  content: '';
+  top: -2px;
+  left: -2px;
+  box-sizing: border-box;
+  outline: 2px solid var(--focus);
+}
+
+
+
+
+
+
+
+
+.slider-pagination-button:hover {
+  background-color: var(--basic-dark);
+  border: 2px solid var(--basic-dark);
+}
+
+.slider-pagination-button:active {
+  background-color: var(--active-header-logo);
+  border: 2px solid var(--active-header-logo);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .slider-pagination-features {
   margin: 0;

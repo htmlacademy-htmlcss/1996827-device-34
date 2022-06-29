@@ -92,7 +92,7 @@
           <button class="slider-prev" type="button">
             <span class="visually-hidden">Предыдущий гаджет</span>
             <svg aria-hidden="true" focusable="false" width="20" height="60" viewBox="0 0 20 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M20 60H16.5L0 30L16.5 0H20L3.8 30L20 60Z" fill="black" />
+              <path d="M20 60H16.5L0 30L16.5 0H20L3.8 30L20 60Z" />
             </svg>
           </button>
 
@@ -100,8 +100,7 @@
             <span class="visually-hidden">Следующий гаджет</span>
             <svg aria-hidden="true" focusable="false" width="20" height="60" viewBox="0 0 20 60" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
-                d="M-5.24537e-06 1.74846e-06L3.49999 1.44248e-06L20 30L3.5 60L0 60L16.2 30L-5.24537e-06 1.74846e-06Z"
-                fill="black" />
+                d="M-5.24537e-06 1.74846e-06L3.49999 1.44248e-06L20 30L3.5 60L0 60L16.2 30L-5.24537e-06 1.74846e-06Z" />
             </svg>
           </button>
 
@@ -113,11 +112,29 @@
           <p class="slider-pagination-slogan">Порхает как бабочка,<br> жалит как пчела!</p>
           <p class="slider-pagination-text">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
 
-          <a class="button slider-pagination-moreinfo" href="#">Подробнее</a>
+          <div class="pagination-row-middle">
+            <a class="button slider-pagination-moreinfo" href="#">Подробнее</a>
 
-          <button class="slider-pagination-button slider-pagination-activ"></button>
-          <button class="slider-pagination-button"></button>
-          <button class="slider-pagination-button"></button>
+            <ul class="slider-pagination-list">
+              <li>
+                <button class="slider-pagination-button"></button>
+              </li>
+            </ul>
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
           <dl class="slider-pagination-features">
             <dt class="slider-pagination-parameter">Дальность полета</dt>
