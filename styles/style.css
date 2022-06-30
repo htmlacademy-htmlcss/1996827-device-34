@@ -522,10 +522,33 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 
   position: relative;
 }
-/*
+
+.submenu-link {
+  text-decoration: none;
+  color: #000000;
+  width: 222px;
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+
+
 li > a:after { content:  ' +'; }
 li > a:only-child:after { content: ''; }
- */
+
+
+
+
+
+
+
+
+
+
+
 
 
 
