@@ -1619,32 +1619,120 @@ li > a:only-child:after { content: ''; }
 
 /* BASE STYLES catalog */
 
-.main-catalog .container {
+/* .main-catalog .container {
   background-color: var(--basic-white);
+}
+ */
+
+
+
+.header-catalog .user-navigation-list {
+  margin: 0;
+  padding: 0;
+  padding-top: 46px;
+  padding-left: 26px;
+  width: 496px;
+  display: grid;
+  grid-template-columns: 146px 1fr 1fr 1fr;
+  align-content: center;
+  column-gap: 26px;
+  list-style: none;
+}
+
+.header-catalog .user-navigation-item:first-child {
+  display: block;;
+}
+
+.header-catalog .user-navigation-item:nth-child(2) {
+  margin-left: 0;
+}
+
+.header-catalog .user-navigation-item:nth-child(3) {
+  margin-left: 1px;
+}
+
+.header-catalog .user-navigation-item:nth-child(4) {
+  margin-left: -6px;
+}
+
+.header-catalog .navigation-rowdown {
+  padding-top: 30px;
+  padding-bottom: 22px;
 }
 
 .catalog-header-title {
-  font-family: "Raleway", "Arial", sans-serif;
-  font-size: 50px;
-  line-height: 1;
+  margin: 0;
+  padding: 0;
+  margin-top: 36px;
+  font-family: 'Raleway';
+  font-style: normal;
   font-weight: 800;
-  letter-spacing: normal;
-  text-transform: none;
+  font-size: 50px;
+  line-height: 50px;
 }
+
+/* хлебные крошки */
 
 .breadcrumbs {
   margin: 0;
   padding: 0;
-  margin-bottom: 40px;
+  padding-top: 14px;
+  margin-bottom: 35px;
   display: flex;
-  font-size: 16px;
-  line-height: 1.18;
+  flex-wrap: wrap;
   list-style: none;
 }
 
-.breadcrumbs-item:not(:last-child) {
-  margin-right: 20px;
+
+.breadcrumbs-item {
+  position: relative;
+  padding-right: 36px;
+  line-height: 19px;
+  list-style-type: none;
 }
+
+.breadcrumbs-item::after {
+  position: absolute;
+  content: "";
+  top: 6px;
+  right: 16px;
+  width: 4px;
+  height: 8px;
+  background-image: url("../images/icon-breadcrumps.svg");
+  background-repeat: no-repeat;
+}
+
+.breadcrumbs-item:last-child:after {
+  content: none;
+}
+
+.breadcrumbs-item:last-child {
+  margin-right: 0;
+  cursor: default;
+}
+
+.main-catalog .breadcrumbs-link {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* .breadcrumbs-item:not(:last-child) {
+  margin-right: 20px;
+} */
 
 .breadcrumbs-link {
   color: var(--basic-black);
