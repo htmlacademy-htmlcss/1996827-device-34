@@ -1619,13 +1619,6 @@ li > a:only-child:after { content: ''; }
 
 /* BASE STYLES catalog */
 
-/* .main-catalog .container {
-  background-color: var(--basic-white);
-}
- */
-
-
-
 .header-catalog .user-navigation-list {
   margin: 0;
   padding: 0;
@@ -1655,10 +1648,16 @@ li > a:only-child:after { content: ''; }
   margin-left: -6px;
 }
 
+.header-catalog .user-navigation-item:nth-child(2) .user-navigation-link {
+  color:rgba(0, 0, 0, 0.3);
+}
+
 .header-catalog .navigation-rowdown {
   padding-top: 30px;
   padding-bottom: 22px;
 }
+
+/* загловок коталога */
 
 .catalog-header-title {
   margin: 0;
@@ -1719,25 +1718,7 @@ li > a:only-child:after { content: ''; }
   line-height: 19px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-/* .breadcrumbs-item:not(:last-child) {
-  margin-right: 20px;
-} */
-
-.breadcrumbs-link {
-  color: var(--basic-black);
-  text-decoration: none;
-}
+/* контейнер каталога */
 
 .catalog-products {
   background-color: #ebebeb;
@@ -1746,31 +1727,78 @@ li > a:only-child:after { content: ''; }
 .catalog-products .container {
   display: flex;
   background-color: #ebebeb;
+  padding-top: 10px;
 }
 
+/* размеры фильтра */
+
 .catalog-filter {
-  width: 320px;
+  /* width: 320px; */
   min-height: 1380px;
   padding-right: 40px;
 }
 
+/* фильтр */
+
 .catalog-subtitle {
-  display: block;
-  line-height: 1.11;
-  font-weight: 700;
+  font-family: "Raleway", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
+  text-decoration: none;
 }
 
-.catalog-products fieldset {
-  padding: 0;
-  margin: 0;
-  border: none;
-}
+/* стоимость цвет bluetooth */
 
 .catalog-filter-title {
-  line-height: 1.11;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 0;
+  padding-top: 12px;
+  line-height: 20px;
   font-weight: 700;
+  letter-spacing: -0.02em;
+  border-top: 2px solid #000000;
 }
+
+/* fieldset */
+
+.catalog-filter-group {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* от до */
+
+.catalog-filter-range-min,
+.catalog-filter-range-max {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+/* диапазон 0 5000 */
+
+.catalog-filter-range-input {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  color: rgba(0, 0, 0, 0.3);
+  background-color: transparent;
+  opacity: 1;
+  border: none;
+  appearance: textfield;
+
+}
+
+/* список фильтров */
 
 .catalog-filter-list {
   margin: 0;
@@ -1778,15 +1806,30 @@ li > a:only-child:after { content: ''; }
   list-style: none;
 }
 
-.catalog-filter-button {
-  min-width: 210px;
-}
+/* чек бокс */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* каталог товаров */
 
 .catalog-column {
   width: 840px;
   min-height: 1380px;
   background-color: var(--basic-white);
 }
+
+/* шапка каталога */
 
 .select-control {
   margin: 0;
@@ -1805,6 +1848,8 @@ li > a:only-child:after { content: ''; }
   font-weight: 800;
   text-transform: uppercase;
 }
+
+/* список товаров */
 
 .product-card-list{
   margin: 0;
@@ -1848,6 +1893,8 @@ li > a:only-child:after { content: ''; }
   color: var(--basic-black);
 }
 
+/* кнокпа загрузить ещё */
+
 .product-list-button {
   margin: 40px 40px 20px;
   width: 760px;
@@ -1858,6 +1905,8 @@ li > a:only-child:after { content: ''; }
   background-color: var(--basic-white);
   border: 2px solid var(--basic-grey);
 }
+
+/* пагинация в каталоге */
 
 .column-pagination {
   margin: 20px 40px 60px;
@@ -1893,12 +1942,4 @@ li > a:only-child:after { content: ''; }
   color: var(--basic-black);
   text-transform: uppercase;
   text-decoration: none;
-}
-
-.footer-catalog {
-  background-color: var(--basic-dark);
-}
-
-.footer-catalog .container {
-  width: 1140px;
 }
