@@ -69,6 +69,7 @@
           </a>
 
           <!-- выпадающее меню на css  -->
+
           <ul class="menu">
             <li class="submenu">
               <ul class="submenu-list">
@@ -212,12 +213,16 @@
 
           <div class="catalog-column">
             <div class="select-control">
+
               <label class="select-control-title" for="select-control">Сортировка:</label>
-              <select id="select-control">
-                <option value="popular">Популярные</option>
-                <option value="cheap">Дешёвые</option>
-                <option value="expensive">Дорогие</option>
-              </select>
+
+              <div class="select">
+                <select class="select-control-list" id="select-control-list">
+                  <option class="option" value="popular">Популярные</option>
+                  <option value="cheap">Дешёвые</option>
+                  <option value="expensive">Дорогие</option>
+                </select>
+              </div>
 
               <div class="select-button">
                 <button type="button">
@@ -237,6 +242,7 @@
             </div>
 
             <div class="product-list">
+              <h2 class="visually-hidden">Селфи-палки</h2>
               <ul class="product-card-list">
                 <li class="product-card">
                   <a class="product-card-link" href="product.html">
@@ -249,18 +255,20 @@
                 </li>
                 <li class="product-card">
                   <a class="product-card-link" href="product.html">
+                    <img class="cards-new" src="images/icon-new.svg" width="60" height="60" alt="Новый товар.">
                     <img class="product-card-image" src="images/product-2.jpg" width="360" height="380" alt="">
                     <div class="product-card-text">
-                      <h3 class="product-card-title">Профессиональная селфи-палка</h3>
+                      <h3 class="product-card-title">Профессиональная<br> селфи-палка</h3>
                       <p class="product-card-price">1500 ₽</p>
                     </div>
+                    <button class="button card-button">Подробнее</button>
                   </a>
                 </li>
                 <li class="product-card">
                   <a class="product-card-link" href="product.html">
                     <img class="product-card-image" src="images/product-3.jpg" width="360" height="380" alt="">
                     <div class="product-card-text">
-                      <h3 class="product-card-title">Непотопляемая селфи-палка</h3>
+                      <h3 class="product-card-title">Непотопляемая <br>селфи-палка</h3>
                       <p class="product-card-price">2500 ₽</p>
                     </div>
                   </a>
@@ -269,7 +277,7 @@
                   <a class="product-card-link" href="product.html">
                     <img class="product-card-image" src="images/product-4.jpg" width="360" height="380" alt="">
                     <div class="product-card-text">
-                      <h3 class="product-card-title">Селфи-палка «Следуй за мной»</h3>
+                      <h3 class="product-card-title">Селфи-палка «Следуй<br> за мной»</h3>
                       <p class="product-card-price">1500 ₽</p>
                     </div>
                   </a>
