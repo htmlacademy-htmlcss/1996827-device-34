@@ -151,61 +151,99 @@
 
           <form class="catalog-filter" action="https://echo.htmlacademy.ru" method="post">
             <p class="catalog-subtitle">Фильтр:</p>
+
+            <div class="filter-line1"></div>
+
             <fieldset class="catalog-filter-group">
               <legend class="catalog-filter-title">Стоимость</legend>
 
-              <label class="catalog-filter-range visually-hidden" for="range">Диапазон</label>
-                <input type="range" name="range" id="range" min="0" max="8000"  step="100" value="5000"><br>
+              <div class="range">
+                <div class="range-line">
+                  <span class="range-line-fill"></span>
+                  <button class="range-button range-min">
+                    <span class="visually-hidden">Минимальная цена</span>
+                  </button>
+                  <button class="range-button range-max">
+                    <span class="visually-hidden">Максимальная цена</span>
+                  </button>
+                </div>
+              </div>
+              <div class="range-wrapper">
+                <label class="range-label" for="range-min">
+                  от
+                  <input class="range-input" type="number" name="range-min" id="range-min" value="0">
+                </label>
 
-
-              <label class="catalog-filter-range-min" for="range-min">от</label>
-                <input class="catalog-filter-range-input" type="text" name="range-min" id="range-min" size="3" value="0">
-
-              <label class="catalog-filter-range-max" for="range-max">до</label>
-                <input class="catalog-filter-range-input" type="text" name="range-max" id="range-max" size="3" value="5000">
+                <label class="range-label" for="range-max">
+                  до
+                  <input class="range-input" type="number" name="range-max" id="range-max" value="5000">
+                </label>
+              </div>
             </fieldset>
+
+            <div class="filter-line2"></div>
 
             <fieldset class="catalog-filter-group">
               <legend class="catalog-filter-title">Цвет</legend>
               <ul class="catalog-filter-list">
                 <li class="catalog-filter-item">
-                  <input class="visually-hidden control-input" type="checkbox" name="filter-black" id="filter-black" checked>
-                  <label class="control" for="filter-black">Черный</label>
-                </li>
-
-
-                <li class="catalog-filter-item">
-                  <input class="visually-hidden control-input" type="checkbox" name="filter-white" id="filter-white" checked>
-                  <label class="control" for="filter-white">Белый</label>
+                  <label class="control" for="filter-black">
+                    <input class="visually-hidden control-input" type="checkbox" name="filter-black" id="filter-black" checked>
+                    <span class="filter-mark"></span>
+                    Черный
+                  </label>
                 </li>
                 <li class="catalog-filter-item">
-                  <input class="visually-hidden control-input" type="checkbox" name="filter-blue" id="filter-blue">
-                  <label class="control" for="filter-blue">Синий</label>
+                  <label class="control" for="filter-white">
+                    <input class="visually-hidden control-input" type="checkbox" name="filter-white" id="filter-white" checked>
+                    <span class="filter-mark"></span>
+                    Белый
+                  </label>
                 </li>
                 <li class="catalog-filter-item">
-                  <input class="visually-hidden control-input" type="checkbox" name="filter-red" id="filter-red">
-                  <label class="control" for="filter-red">Красный</label>
+                  <label class="control" for="filter-blue">
+                    <input class="visually-hidden control-input" type="checkbox" name="filter-blue" id="filter-blue">
+                    <span class="filter-mark"></span>
+                    Синий
+                  </label>
                 </li>
                 <li class="catalog-filter-item">
-                  <input class="visually-hidden control-input" type="checkbox" name="filter-pink" id="filter-pink">
-                  <label class="control" for="filter-pink">Розовый</label>
+                  <label class="control" for="filter-red">
+                    <input class="visually-hidden control-input" type="checkbox" name="filter-red" id="filter-red">
+                    <span class="filter-mark"></span>
+                    Красный
+                  </label>
+                </li>
+                <li class="catalog-filter-item">
+                  <label class="control" for="filter-pink">
+                    <input class="visually-hidden control-input" type="checkbox" name="filter-pink" id="filter-pink">
+                    <span class="filter-mark"></span>
+                    Розовый
+                  </label>
                 </li>
               </ul>
             </fieldset>
+
+            <div class="filter-line3"></div>
 
             <fieldset class="catalog-filter-group">
               <legend class="catalog-filter-title">Bluetooth</legend>
               <ul class="catalog-filter-list">
                 <li class="catalog-filter-item">
-                  <input class="visually-hidden control-input2" type="radio" name="bluetooth-group" value="bluetooth-true" id="bluetooth-true" checked>
-                  <label class="control2" for="bluetooth-true">Есть</label>
+                  <label class="control2" for="bluetooth-true">
+                    <input class="visually-hidden control-input2" type="radio" name="bluetooth-group" value="bluetooth-true" id="bluetooth-true" checked>
+                    <span class="filter-mark2"></span>
+                    Есть
+                  </label>
                 </li>
                 <li class="catalog-filter-item">
-                  <input class="visually-hidden control-input2" type="radio" name="bluetooth-group" value="bluetooth-true" id="bluetooth-false">
-                  <label class="control2" for="bluetooth-false">Нет</label>
+                  <label class="control2" for="bluetooth-false">
+                    <input class="visually-hidden control-input2" type="radio" name="bluetooth-group" value="bluetooth-true" id="bluetooth-false">
+                    <span class="filter-mark2"></span>
+                    Нет
+                  </label>
                 </li>
               </ul>
-
             </fieldset>
 
             <button class="button catalog-filter-button" type="submit">Показать</button>

@@ -1775,7 +1775,6 @@ li > a:only-child:after { content: ''; }
 .catalog-products .container {
   display: flex;
   background-color: #ebebeb;
-  /* padding-top: 10px; */
 }
 
 /* размеры фильтра */
@@ -1800,23 +1799,24 @@ li > a:only-child:after { content: ''; }
   letter-spacing: 0.2em;
   text-transform: uppercase;
   text-decoration: none;
-  /* text-align: center; */
-  /* vertical-align: middle; */
-
 }
 
-/* стоимость / цвет / bluetooth */
+.filter-line1 {
+  margin-top: 33px;
+  margin-bottom: 3px;
+  border-top: 2px solid var(--basic-black);
+}
 
-.catalog-filter-title {
-  padding: 0;
-  margin: 0;
-  width: 100%;
-  padding-top: 12px;
-  line-height: 20px;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  /* черта - граница */
-  border-top: 2px solid #000000;
+.filter-line2 {
+  margin-top: 28px;
+  margin-bottom: 2px;
+  border-top: 2px solid var(--basic-black);
+}
+
+.filter-line3 {
+  margin-top: 39px;
+  margin-bottom: 2px;
+  border-top: 2px solid var(--basic-black);
 }
 
 /* fieldset */
@@ -1825,6 +1825,136 @@ li > a:only-child:after { content: ''; }
   border: none;
   margin: 0;
   padding: 0;
+  /* margin-top: 33px; */
+}
+
+/* стоимость / цвет / bluetooth */
+
+.catalog-filter-title {
+  padding: 0;
+  margin: 0;
+  padding-top: 10px;
+  padding-bottom: 2px;
+  width: 100%;
+  line-height: 20px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  /* черта - граница */
+  /* border-top: 2px solid var(--basic-black); */
+}
+
+/* range */
+
+.range {
+  position: relative;
+  padding-top: 26px;
+  padding-bottom: 9px;
+
+}
+
+/* progress bar */
+
+.range-line {
+  position: absolute;
+  height: 2px;
+  width: 200px;
+  background-color: var(--basic-grey);
+}
+
+.range-line-fill {
+  width: 60%;
+  display: block;
+  height: 2px;
+  background-color: var(--basic-black);
+  transition: width 500ms ease-in-out;
+}
+
+/* кнопки минимума / максимума */
+
+.range-button {
+  padding: 0;
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: var(--basic-light);
+  border: 2px solid var(--basic-black);
+  cursor: pointer;
+  z-index: 1;
+}
+
+.range-min {
+  top: -8px;
+  left: -8px;
+}
+
+.range-max {
+  top: -8px;
+  left: 110px;
+}
+
+.range-button:hover,
+.range-button:disabled {
+  border-color: rgba(0, 0, 0, 0.5);
+}
+
+.range-button:active {
+  background-color: var(--basic-black);
+}
+
+.range-button:focus {
+  outline: none;
+}
+
+.range-button:focus::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  outline: 2px solid var(--basic-purple);
+  outline-offset: 2px;
+}
+
+/* диапазон рейнджа */
+
+.range-wrapper {
+  display: flex;
+}
+
+.range-label {
+  font: inherit;
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.range-label:focus-within {
+  outline: 2px solid var(--basic-purple);
+}
+
+.range-input {
+  padding: 0;
+  width: 60px;
+  font: inherit;
+  line-height: 18px;
+  color: rgba(0, 0, 0, 0.3);
+  background-color: transparent;
+  opacity: 1;
+  border: none;
+  appearance: textfield;
+}
+
+.range-input:focus {
+  outline: none;
+}
+
+/* убираем стрелки в инпутах */
+
+.range-input::-webkit-outer-spin-button,
+.range-input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
 }
 
 /* от до */
@@ -1862,20 +1992,13 @@ li > a:only-child:after { content: ''; }
   list-style: none;
 }
 
-.catalog-filter-group {
-  margin-top: 35px;
-}
-
 /* элемент списка чекеда */
 
 .catalog-filter-item {
   padding-top: 17px;
   position: relative;
   display: flex;
-	/* flex-direction: row; */
-  /* justify-content: flex-start; */
 	align-items: center;
-
 }
 
 /* лэйбл */
@@ -1887,15 +2010,17 @@ li > a:only-child:after { content: ''; }
   font-weight: 400;
   font-size: 16px;
   line-height: 19px;
+  position: relative;
 }
 
 /* неактивный чекед */
 
-.control::before {
+.filter-mark::before {
   width: 24px;
 	height: 24px;
   display: block;
   position: absolute;
+  top: -2px;
   left: 0;
   content: "";
 	background-image: url(../images/checkbox-off.svg);
@@ -1904,19 +2029,32 @@ li > a:only-child:after { content: ''; }
   cursor: pointer;
 }
 
+.control:focus-within::after {
+  width: 200px;
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  outline: 2px solid var(--basic-purple);
+  outline-offset: 2px;
+}
+
 /* активный чекед */
 
-.control-input[type="checkbox"]:checked + .control::before {
+.control-input[type="checkbox"]:checked + .filter-mark::before {
 	background-image: url(../images/checkbox-on.svg);
 }
 
 /* неактивный радио чекед */
 
-.control2::before {
+.filter-mark2::before {
   width: 24px;
 	height: 24px;
   display: block;
   position: absolute;
+  top: 14px;
   left: 0;
   content: "";
 	background-image: url(../images/radio-off.svg);
@@ -1925,9 +2063,22 @@ li > a:only-child:after { content: ''; }
   cursor: pointer;
 }
 
+.control2:focus-within::after {
+  height: 23px;
+  width: 200px;
+  position: absolute;
+  content: "";
+  top: 14px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  outline: 2px solid var(--basic-purple);
+  outline-offset: 2px;
+}
+
 /* активный радио чекед */
 
-.control-input2[type="radio"]:checked + .control2::before {
+.control-input2[type="radio"]:checked + .filter-mark2::before {
 	background-image: url(../images/radio-on.svg);
 }
 
@@ -1943,17 +2094,33 @@ li > a:only-child:after { content: ''; }
 /* кнопка фильтра */
 
 .catalog-filter-button {
-  margin-top: 20px;
+  margin-top: 40px;
+  margin-left: 1px;
+  width: 220px;
   box-shadow: 0 -16px 0 #ebebeb inset, 0 16px 0 #ebebeb inset;
 }
 
 .catalog-filter-button:hover {
-	background: var(--basic-yellow);
-	border: none;
-	box-shadow:none;
+  border: none;
+	box-shadow: none;
 	transition: box-shadow 0.1s linear 0.1s;
 }
 
+.catalog-filter-button:active {
+	border: none;
+	box-shadow: none;
+  background: var(--basic-yellow-hover);
+	transition: box-shadow 0.1s linear 0.1s;
+}
+
+.catalog-filter-button:focus-within {
+  outline: 2px solid var(--basic-purple);
+}
+
+.catalog-filter-button:disabled {
+  color: #b3b3b3;
+  background-color: #fff6d9;
+}
 
 /* каталог товаров */
 
