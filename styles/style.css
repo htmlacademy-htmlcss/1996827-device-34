@@ -2075,9 +2075,8 @@ li > a:only-child:after { content: ''; }
   width: 840px;
   display: grid;
   grid-template-columns: 360px 360px;
-  /* gap: 32px 40px; */
   column-gap: 40px;
-  row-gap: 26px;
+  row-gap: 45px;
   background-color: var(--basic-white);
   list-style: none;
 }
@@ -2135,40 +2134,84 @@ li > a:only-child:after { content: ''; }
   position: relative;
   width: 360px;
   height: 452px;
+  display: block;
 }
 
 .cards-new {
   position: absolute;
-  top: -340px;
+  top: 27px;
   right: 27px;
+}
+
+/* кнопка подробнее */
+
+.card-button-container {
+	position: absolute;
+  top: 170px;
+  right: 70px;
+  opacity: 0;
 }
 
 .card-button {
   width: 220px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  margin-left: -180px;
-  margin-top: -226px;
-
-  background-color: transparent;
-  box-shadow: 0 0px 0px rgba(0, 0, 0, 0.6);
+  height: 40px;
+  font-family: 'Raleway', "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 800;
+  font-style: normal;
+  letter-spacing: 0.2em;
+  border: none;
+	background: none;
+	text-transform: uppercase;
+	position: relative;
+	z-index: 2;
 }
 
+.card-button-background {
+	position: absolute;
+	background-color: var(--basic-yellow);
+	width: 220px;
+	height: 8px;
+	top: 16px;
+	z-index: 1;
+}
 
+.card-button:hover {
+	background: var(--basic-yellow);
+	border: none;
+	box-shadow:none;
+	transition: box-shadow 0.1s linear 0.1s;
+}
 
+.card-button:active {
+	background: var(--basic-yellow-hover);
+	border: none;
+	box-shadow:none;
+	transition: box-shadow 0.1s linear 0.1s;
+}
 
+/* состояние карточек товара */
 
+.product-card:hover .card-button-container {
+  opacity: 1;
+}
 
+.product-card-link:focus {
+  outline: 2px solid #af4fff;
+}
 
 
 
 /* кнокпа загрузить ещё */
 
 .product-list-button {
-  margin: 40px 40px 20px;
+  /* margin: 0 40px; */
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-bottom: 100px;
   width: 760px;
-  min-height: 70px;
+  height: 70px;
   font-size: 16px;
   line-height: 1.18;
   box-shadow: none;
