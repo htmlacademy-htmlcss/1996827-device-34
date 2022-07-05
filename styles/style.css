@@ -2052,15 +2052,15 @@ li > a:only-child:after { content: ''; }
 .select-button button {
   border: none;
   background-color: transparent;
-  /* position: absolute; */
+  fill: #cccccc;
 }
 
-.select-button button:hover svg {
-  opacity: 0.5;
+.select-button button:hover {
+  fill: #7f7f7f;
 }
 
 .select-button button:active svg {
-  opacity: 1;
+  fill: var(--basic-black);
 }
 
 .select-button button:focus {
@@ -2071,7 +2071,7 @@ li > a:only-child:after { content: ''; }
 
 .product-card-list {
   margin: 0;
-  padding: 70px 40px 78px;
+  padding: 70px 40px 44px;
   width: 840px;
   display: grid;
   grid-template-columns: 360px 360px;
@@ -2099,23 +2099,14 @@ li > a:only-child:after { content: ''; }
   width: 226px;
   padding-top: 5px;
   padding-left: 1px;
-  /* font-size: 18px;
-  line-height: 1.11;
-  font-weight: 700; */
   font-family: 'Rubik';
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
   line-height: 20px;
-  /* or 111% */
   letter-spacing: -0.02em;
   color: var(--basic-black);
 }
-
-/* .product-card:nth-child(2) .product-card-title,
-.product-card:nth-child(4) .product-card-title {
-  letter-spacing: -0.02em;
-} */
 
 .product-card-price {
   margin-left: auto;
@@ -2128,7 +2119,7 @@ li > a:only-child:after { content: ''; }
   color: var(--basic-black);
 }
 
-/* new */
+/* штамп new */
 
 .product-card-link {
   position: relative;
@@ -2198,65 +2189,114 @@ li > a:only-child:after { content: ''; }
 }
 
 .product-card-link:focus {
-  outline: 2px solid #af4fff;
+  outline: 2px solid var(--basic-purple);
 }
-
-
 
 /* кнокпа загрузить ещё */
 
 .product-list-button {
-  /* margin: 0 40px; */
+  margin: 0;
+  padding: 0;
   margin-left: 40px;
   margin-right: 40px;
-  margin-bottom: 100px;
+  margin-bottom: 44px;
+  padding-left: 4px;
   width: 760px;
-  height: 70px;
+  height: 55px;
+  display: block;
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 800;
   font-size: 16px;
-  line-height: 1.18;
-  box-shadow: none;
+  line-height: 19px;
+  letter-spacing: 0.2em;
   background-color: var(--basic-white);
-  border: 2px solid var(--basic-grey);
+  border: 3px solid var(--basic-grey);
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
 }
 
+.product-list-button:hover {
+  border-color: var(--basic-black);
+}
 
+.product-list-button:active {
+  opacity: 0.3;
+}
 
+.product-list-button:focus {
+  outline: 2px solid var(--basic-purple);
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.product-list-button:disabled {
+  border-color: #e5e5e5;
+  opacity: 0.3;
+}
 
 /* пагинация в каталоге */
 
 .column-pagination {
-  margin: 20px 40px 60px;
+  margin: 44px 40px 78px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  width: 760px;
+  height: 71px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #ebebeb;
 }
 
+/* кнопки назад / вперед */
+
+.pagination-button {
+  margin: 0;
+  padding: 0;
+   width: 128px;
+  height: 71px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.2em;
+  color: var(--basic-black);
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.pagination-button-prev {
+  padding-left: 5px;
+  padding-bottom: 2px;
+}
+
+.pagination-button-next {
+  padding-right: 7px;
+  padding-bottom: 2px;
+}
+
+.pagination-button:hover {
+  background-color: var(--basic-grey);
+}
+
+.pagination-button:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.pagination-button:focus {
+  outline: 2px solid var(--basic-purple);
+}
+
+/* кнопки цифры */
+
 .column-pagination-list {
+  margin-right: 50px;
   display: flex;
   list-style: none;
 }
@@ -2271,15 +2311,26 @@ li > a:only-child:after { content: ''; }
   line-height: 1.25;
   color: #B3B3B3;
   text-decoration: none;
+  cursor: pointer;
 }
 
-.pagination-button {
-  width: 128px;
-  min-height: 71px;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  color: var(--basic-black);
-  text-transform: uppercase;
-  text-decoration: none;
+.column-pagination-item:first-child .column-pagination-link {
+  color: #8f8f8f;
 }
+
+.column-pagination-item .column-pagination-link:hover {
+  color: var(--basic-black);
+}
+
+.column-pagination-item .column-pagination-link:active {
+  opacity: 0.1;
+}
+
+.column-pagination-item .column-pagination-link:focus {
+  outline: 2px solid var(--basic-purple);
+}
+
+.column-pagination-item .column-pagination-link:disabled {
+  opacity: 0.1;
+}
+
