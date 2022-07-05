@@ -2334,3 +2334,99 @@ li > a:only-child:after { content: ''; }
   opacity: 0.1;
 }
 
+/* модальное окно - доставка под заказ */
+
+.modal-delivery {
+  margin: 0;
+  padding: 72px 80px;
+  width: 920px;
+  height: 568px;
+  border: 10px solid var(--basic-black);
+}
+
+.modal-title {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 42px;
+  grid-area: title;
+  font-family: 'Raleway';
+font-style: normal;
+font-weight: 800;
+font-size: 50px;
+line-height: 50px;
+}
+
+.delivery-form {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas: "name name email email"
+                       "text text text amt"
+                       "button button button button";
+  column-gap: 40px;
+  row-gap: 42px;
+}
+
+.modal-delivery-name {
+  grid-area: name;
+}
+
+.modal-delivery-email {
+  grid-area: email;
+}
+
+.modal-delivery-text {
+  grid-area: text;
+}
+
+.modal-delivery-amt {
+  grid-area: amt;
+}
+
+.modal-delivery-button {
+  grid-area: button;
+}
+
+.modal-delivery-name,
+.modal-delivery-email,
+.modal-delivery-text,
+.modal-delivery-amt {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.delivery-form label {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+  margin-bottom: 14px;
+}
+
+.delivery-form input {
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 16px;
+  line-height: 20px;
+  background-color: var(--basic-light);
+  color: var(--basic-black);
+  border: none;
+}
+
+.delivery-form input::placeholder {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.modal-delivery-button {
+  width: 200px;
+}

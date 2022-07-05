@@ -433,5 +433,39 @@
       </div>
     </div>
   </footer>
+
+
+
+
+  <div class="modal-delivery">
+    <h2 class="modal-title">Доставка под заказ</h2>
+
+    <form class="delivery-form" action="https://echo.htmlacademy.ru" method="post">
+        <p class="modal-delivery-name">
+          <label for="name">Ваше имя:</label>
+          <input class="delivery-name" type="text" name="name" id="name" placeholder="Введите имя" required>
+        </p>
+        <p class="modal-delivery-email">
+          <label for="email">Ваш e-mail:</label>
+          <input class="delivery-email" type="email" name="email" id="email" placeholder="почта" required>
+        </p>
+        <p class="modal-delivery-text">
+          <label for="question">Что нужно привезти:</label>
+          <input class="delivery-question" type="text" name="question" id="question" placeholder="В свободной форме" required>
+        </p>
+        <p class="modal-delivery-amt">
+          <label for="amount">Количество:</label>
+          <input class="delivery-amount" type="number" name="amount" id="amount" placeholder="1">
+        </p>
+        <button class="button modal-delivery-button" type="submit">Отправить</button>
+    </form>
+    <button class="modal-close" type="button">
+      <span class="visually-hidden">Закрыть</span>
+    </button>
+  </div>
+
+
+
+
 </body>
 </html>
