@@ -2336,12 +2336,32 @@ li > a:only-child:after { content: ''; }
 
 /* модальное окно - доставка под заказ */
 
+.body {
+  position: relative;
+}
+
+
+
 .modal-delivery {
-  margin: 0;
   padding: 72px 80px;
   width: 920px;
   height: 568px;
+
+  display: none;
+  background-color: var(--basic-white);
   border: 10px solid var(--basic-black);
+
+  width: 50%;
+  height: 50%;
+  overflow: auto;
+  margin: auto;
+  position: fixed;
+  top: 0; left: 0; bottom: 0; right: 0;
+  z-index: 999;
+}
+
+.opened {
+  display: block;
 }
 
 .modal-title {
