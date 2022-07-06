@@ -449,10 +449,26 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 
 /* фокус */
 
-.navigation-catalog-link:focus-within {
+/* .navigation-catalog-link:focus-within {
+  outline: 2px solid var(--basic-purple);
+  outline-offset: 2px;
+} */
+.navigation-catalog-link:focus {
+  outline: none;
+}
+
+.navigation-catalog-link:focus-within::before {
+  position: absolute;
+  content: "";
+  top: -5px;
+  bottom: 0;
+  left: 10px;
+  right: 0;
   outline: 2px solid var(--basic-purple);
   outline-offset: 2px;
 }
+
+/* подменю каталога товаров */
 
 .navigation-rowdown:hover > .submenu{
   display: flex;
