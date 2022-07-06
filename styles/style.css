@@ -2550,24 +2550,21 @@ li > a:only-child:after { content: ''; }
 }
 
 .modal-delivery {
+
   padding: 72px 80px;
   width: 920px;
-  height: 568px;
-  box-sizing: border-box;
+  height: 590px;
+  /* box-sizing: border-box; */
 
-  /* display: none; */
+  display: none;
   background-color: var(--basic-white);
   border: 10px solid var(--basic-black);
-  position: relative;
 
-  /* центровка модалки */
-
-  /* overflow: auto;
+  overflow: auto;
   margin: auto;
   position: fixed;
   top: 0; left: 0; bottom: 0; right: 0;
-  z-index: 999; */
-
+  z-index: 999;
 }
 
 .opened {
@@ -2676,7 +2673,7 @@ li > a:only-child:after { content: ''; }
   position: absolute;
   content: "";
   top: 57px;
-  left: 320px;
+  left: 305px;
   background-image: url(../images/icon-user.svg);
   background-repeat: no-repeat;
   background-position: center;
@@ -2688,7 +2685,7 @@ li > a:only-child:after { content: ''; }
   position: absolute;
   content: "";
   top: 57px;
-  left: 320px;
+  left: 335px;
   background-image: url(../images/icon-email.svg);
   background-repeat: no-repeat;
   background-position: center;
@@ -2761,6 +2758,139 @@ li > a:only-child:after { content: ''; }
   top: -3px;
   right: 5px;
 }
+
+/* modal tooltip */
+
+.modal-tooltip {
+  width: 200px;
+  height: 160px;
+  padding: 19px 17px 19px 19px;
+
+  display: none;
+  position: absolute;
+  content: "";
+  top: 33px;
+  left: 0;
+  z-index: 3;
+
+  font-family: Rubik, sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  color: var(--basic-white);
+  background-color: var(--basic-black);
+}
+
+.modal-tooltip::before {
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  content: "";
+  top: -6px;
+  left: 155px;
+  background-color: var(--basic-black);
+  transform: rotate(45deg);
+}
+
+.modal-icon:hover + .modal-tooltip {
+  display: block;
+}
+
+
+/* раздел количество */
+
+.modal-delivery-wrapper {
+  width: 180px;
+  position: relative;
+  display: flex;
+  align-items: center;
+
+}
+
+.modal-button {
+  width: 60px;
+  height: 60px;
+  padding: 20px 22px 29px;
+  display: inline-block;
+  background-color: #f0f0f0;
+  border: none;
+  cursor: pointer;
+  z-index: 1;
+  fill: #000000;
+  position: relative;
+}
+
+.modal-button-plus {
+  padding-top: 23px;
+}
+
+.modal-button svg {
+  fill: #000000;
+}
+
+.modal-button:hover {
+  background-color: #dcdcdc;
+}
+
+.modal-button:hover > svg {
+  fill: rgba(0, 0, 0, 0.3);
+}
+
+.modal-button:focus-within {
+  z-index: 2;
+
+  outline: 2px solid #af4fff;
+  outline-offset: 2px;
+}
+
+.modal-button:disabled {
+  background-color: #f0f0f0;
+  cursor: default;
+  opacity: 0.3;
+}
+
+.modal-number-field:hover {
+  background-color: #dcdcdc;
+}
+
+.modal-number-field:focus-within {
+  z-index: 2;
+
+  outline: 2px solid #af4fff;
+  outline-offset: 2px;
+}
+
+
+
+
+
+
+
+
+.modal-number-field {
+  margin: 0;
+  padding: 0;
+  width: 60px;
+  height: 60px;
+  display: inline-block;
+  box-sizing: border-box;
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--basic-black);
+  text-align: center;
+  appearance: textfield;
+}
+
+.modal-number-field::-webkit-outer-spin-button,
+.modal-number-field::-webkit-inner-spin-button {
+  margin: 0;
+  appearance: none;
+}
+
+
 
 /* кнопка модалки */
 

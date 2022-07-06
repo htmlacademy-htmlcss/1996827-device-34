@@ -464,17 +464,36 @@
           <input class="delivery-question" type="text" name="question" id="question" placeholder="В свободной форме" required>
         </p>
         <p class="modal-delivery-amt">
-          <label for="amount">Количество:</label>
+          <span >Количество:</span>
           <svg class="modal-icon" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="13" cy="13" r="13" fill="#FFE17F"/>
             <path d="M14 7H12V9H14V7Z" fill="black"/>
             <path d="M14 11H12V19H14V11Z" fill="black"/>
-            </svg>
-          <input class="delivery-amount" type="number" name="amount" id="amount" placeholder="1">
+          </svg>
+          <span class="modal-tooltip">Постараемся найти, сколько нужно. Привезём сколько получится по требованиям к провозу багажа.</span>
+
+          <!-- количество -->
+
+          <span class="modal-delivery-wrapper">
+            <button class="modal-button">
+              <span class="visually-hidden">Уменьшить</span>
+              <svg width="16" height="2" viewBox="0 0 16 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16 0H0V2H16V0Z" />
+              </svg>
+            </button>
+
+            <label class="visually-hidden" for="number-field">Количество товара</label>
+            <input class="modal-number-field " type="number" value="1" id="number-field" name="number-field" min="1">
+
+            <button class="modal-button modal-button-plus">
+              <svg class="svg-button-plus" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16 7H9V0H7V7H0V9H7V16H9V9H16V7Z"/>
+              </svg>
+            </button>
+          </span>
         </p>
         <button class="button modal-delivery-button" type="submit">Отправить</button>
     </form>
-
   </div>
 
   <script src="script/script.js"></script>
