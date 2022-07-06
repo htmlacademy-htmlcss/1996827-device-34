@@ -2742,15 +2742,6 @@ li > a:only-child:after { content: ''; }
   outline: 2px solid rgba(0, 0, 0, 0.3);
 }
 
-
-
-
-
-
-
-
-
-
 .delivery-text {
   font-family: 'Rubik';
   font-style: normal;
@@ -2759,6 +2750,17 @@ li > a:only-child:after { content: ''; }
   line-height: 20px;
 }
 
+/* желтый круг */
+
+.modal-delivery-amt {
+  position: relative;
+}
+
+.modal-icon {
+  position: absolute;
+  top: -3px;
+  right: 5px;
+}
 
 /* кнопка модалки */
 
