@@ -363,6 +363,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
   width: 293px;
   height: 50px;
   margin-left: -7px;
+  position: relative;
   display: inline-flex;
   align-items: center;
   font-family: 'Raleway';
@@ -374,7 +375,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
   color: var(--basic-black);
   text-decoration: none;
   text-transform: uppercase;
-  position: relative;
+
   border: none;
   background-color: transparent;
 }
@@ -451,37 +452,49 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 
 /* фокус */
 
-/* .navigation-catalog-link:focus-within {
-  outline: 2px solid var(--basic-purple);
-  outline-offset: 2px;
-} */
-.navigation-catalog-link:focus {
+.navigation-catalog-link:focus-within {
   outline: none;
 }
 
-.navigation-catalog-link:focus-within::before {
+.navigation-catalog-link:focus-within .navigation-catalog-focus::before {
+  height: 50px;
+  width: 293px;
   position: absolute;
   content: "";
-  top: -5px;
+  top: -3px;
   bottom: 0;
-  left: 10px;
+  left: 5px;
   right: 0;
   outline: 2px solid var(--basic-purple);
   outline-offset: 2px;
 }
 
+
 /* подменю каталога товаров */
 
-.navigation-rowdown:hover > .submenu{
+/* .navigation-catalog-link:focus-within {
+  outline: 2px solid var(--basic-purple);
+  outline-offset: 2px;
+} */
+
+/* .navigation-rowdown:hover > .submenu {
+  display: flex;
+} */
+
+.navigation-rowdown:focus-within > .submenu {
+  display: flex;
+}
+/*
+.navigation-rowdown:hover > .submenu {
+  display: flex;
+} */
+
+.navigation-catalog-link:focus-within .submenu,
+.navigation-catalog-link:hover ~ .submenu,
+.navigation-catalog-link:active .submenu {
   display: flex;
 }
 
-.navigation-catalog-link:focus-within .submenu,
-/* .navigation-catalog-link:hover ~ .submenu, */
-.navigation-catalog-link:active .submenu {
-  display: flex;
-  position: absolute;
-}
 
 .submenu {
   margin: 0 auto;
@@ -527,7 +540,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 	opacity: 0.3;
 }
 
-.submenu-main-link:focus {
+.submenu-main-link:focus-within {
   outline: 2px solid var(--basic-purple);
   outline-offset: 2px;
 }
@@ -1713,8 +1726,6 @@ li > a:only-child:after { content: ''; }
 .header-catalog .navigation-catalog-link {
   padding-left: 6px;
 }
-
-
 
 .header-catalog .navigation-rowdown {
   padding-top: 30px;
