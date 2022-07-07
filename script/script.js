@@ -14,6 +14,7 @@ closeButton.onclick = function () {
   modalDelivery.classList.remove('opened');
 };
 
+
 // слайдер главной страницы
 
 let btnNext = document.querySelector(".slider-next");
@@ -34,7 +35,6 @@ btnPrev.onclick = function () {
   }
 };
 
-
 btnNext.onclick = function () {
   ++i;
   if (i >= slides.length) {
@@ -47,7 +47,4 @@ btnNext.onclick = function () {
       slides[i].classList.add("slider-block");
   }
 };
-
-
-
 
