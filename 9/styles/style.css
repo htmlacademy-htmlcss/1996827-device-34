@@ -600,7 +600,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
   fill: var(--basic-black);
 }
 
-/* фокус */
+/* фокус на весь navigation-catalog-link */
 
 .navigation-catalog-link:focus-within {
   outline: none;
@@ -619,22 +619,21 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
   outline-offset: 2px;
 }
 
+/* активируем подменю */
 
-/* подменю каталога товаров */
-
-/* .navigation-rowdown:focus-within > .submenu {
-  display: flex;
-} */
-/*
-.navigation-rowdown:hover > .submenu {
-  display: flex;
-} */
-
-.navigation-catalog-link:focus-within .submenu,
-.navigation-catalog-link:hover ~ .submenu,
-.navigation-catalog-link:active .submenu {
+.navigation-rowdown:active > .submenu {
   display: flex;
 }
+
+.navigation-catalog-link:focus-within + .submenu {
+  display: flex;
+}
+
+.navigation-catalog-link:hover + .submenu {
+  display: flex;
+}
+
+/* подменю каталога товаров */
 
 .submenu {
   margin: 0 auto;
@@ -766,8 +765,9 @@ li > a:only-child:after { content: ''; }
 
 .slider-prev {
   padding: 0;
+  padding-top: 3px;
   position: relative;
-  top: 62px;
+  top: 60px;
   left: 30px;
   display: inline-block;
   z-index: 2;
@@ -795,9 +795,10 @@ li > a:only-child:after { content: ''; }
 
 .slider-next {
   padding: 0;
+  padding-top: 3px;
   position: relative;
-  left: 515px;
-  top: 62px;
+  left: 516px;
+  top: 60px;
   display: inline-block;
   z-index: 2;
   background-color: transparent;
