@@ -765,8 +765,9 @@ li > a:only-child:after { content: ''; }
 
 .slider-prev {
   padding: 0;
+  padding-top: 3px;
   position: relative;
-  top: 62px;
+  top: 60px;
   left: 30px;
   display: inline-block;
   z-index: 2;
@@ -794,9 +795,10 @@ li > a:only-child:after { content: ''; }
 
 .slider-next {
   padding: 0;
+  padding-top: 3px;
   position: relative;
-  left: 515px;
-  top: 62px;
+  left: 516px;
+  top: 60px;
   display: inline-block;
   z-index: 2;
   background-color: transparent;
