@@ -602,11 +602,11 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 
 /* фокус на весь navigation-catalog-link */
 
-.navigation-catalog-link:focus-within {
+.navigation-catalog-link:focus {
   outline: none;
 }
 
-.navigation-catalog-link:focus-within .navigation-catalog-focus::before {
+.navigation-catalog-link:focus .navigation-catalog-focus::before {
   height: 50px;
   width: 293px;
   position: absolute;
@@ -621,9 +621,14 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 
 /* активируем подменю */
 
-.navigation-rowdown:active > .submenu {
+/* .navigation-rowdown:hover + .submenu {
   display: flex;
 }
+
+.navigation-rowdown:focus-within + .submenu {
+  display: flex;
+}
+
 
 .navigation-catalog-link:focus-within + .submenu {
   display: flex;
@@ -631,7 +636,37 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 
 .navigation-catalog-link:hover + .submenu {
   display: flex;
+} */
+
+
+
+.navigation-rowdown:hover .submenu {
+  display: flex;
 }
+
+.navigation-rowdown:hover > .submenu {
+  display: flex;
+}
+
+
+.navigation-rowdown:focus .submenu {
+  display: flex;
+}
+
+.navigation-rowdown:focus-within .submenu {
+  display: flex;
+}
+
+
+.navigation-catalog-link:focus-within ~ .submenu,
+.navigation-catalog-link:active ~ .submenu,
+.navigation-catalog-link:hover ~ .submenu {
+  display: flex;
+}
+
+
+
+
 
 /* подменю каталога товаров */
 
