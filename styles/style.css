@@ -1031,6 +1031,10 @@ li > a:only-child:after { content: ''; }
 
 /* каталог товаров в main */
 
+.main-menu {
+  padding-top: 42px;
+}
+
 .main-navigation-list {
   margin: 0;
   padding: 0;
