@@ -507,6 +507,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
   padding-top: 32px;
   padding-bottom: 132px;
   display: flex;
+  justify-content: space-between;
   position: relative;
   z-index: 3;
 }
@@ -622,7 +623,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 
 /* активируем подменю */
 
-.navigation-rowdown:hover .submenu {
+.rowdown-left:hover .submenu {
   display: flex;
 }
 
@@ -642,7 +643,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
   width: 1160px;
 	position: absolute;
 	left: -60px;
-	top: 86px;
+	top: 83px;
 	background: var(--basic-yellow);
   z-index: 3;
   cursor: pointer;
@@ -740,6 +741,7 @@ li > a:only-child:after { content: ''; }
 }
 
 .site-navigation-link:focus-within {
+  z-index: 4;
   outline: 2px solid var(--basic-purple);
 }
 
