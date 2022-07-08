@@ -508,6 +508,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
   padding-bottom: 132px;
   display: flex;
   position: relative;
+  z-index: 3;
 }
 
 .navigation-catalog-link {
@@ -621,52 +622,14 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 
 /* активируем подменю */
 
-/* .navigation-rowdown:hover + .submenu {
-  display: flex;
-}
-
-.navigation-rowdown:focus-within + .submenu {
-  display: flex;
-}
-
-
-.navigation-catalog-link:focus-within + .submenu {
-  display: flex;
-}
-
-.navigation-catalog-link:hover + .submenu {
-  display: flex;
-} */
-
-
-
 .navigation-rowdown:hover .submenu {
   display: flex;
 }
 
-.navigation-rowdown:hover > .submenu {
-  display: flex;
-}
-
-
-.navigation-rowdown:focus .submenu {
-  display: flex;
-}
 
 .navigation-rowdown:focus-within .submenu {
   display: flex;
 }
-
-
-.navigation-catalog-link:focus-within ~ .submenu,
-.navigation-catalog-link:active ~ .submenu,
-.navigation-catalog-link:hover ~ .submenu {
-  display: flex;
-}
-
-
-
-
 
 /* подменю каталога товаров */
 
