@@ -159,7 +159,7 @@ img {
 
 .navigation-search {
   margin-top: 45px;
-  height: 40px;
+  min-height: 40px;
   display: flex;
 }
 
@@ -287,7 +287,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 .user-navigation-number {
   margin-right: -7px;
   width: 21px;
-  height: 21px;
+  min-height: 21px;
   font-size: 14px;
   line-height: 17px;
   display: flex;
@@ -1243,7 +1243,7 @@ li > a:only-child:after { content: ''; }
   padding-bottom: 14px;
   padding-left: 55px;
   width: 1160px;
-  height: 100px;
+  min-height: 100px;
   position: relative;
   font-family: 'Raleway';
   font-size: 20px;
@@ -1752,7 +1752,7 @@ li > a:only-child:after { content: ''; }
 
 .footer-social-link {
   width: 40px;
-  height: 40px;
+  min-height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2343,8 +2343,8 @@ li > a:only-child:after { content: ''; }
 
 .select-control {
   margin: 0;
-  padding: 26px 40px 24px ;
-  height: 70px;
+  padding: 20px 40px 24px ;
+  min-height: 70px;
   display: flex;
   align-content: center;
   align-items: center;
@@ -2353,6 +2353,7 @@ li > a:only-child:after { content: ''; }
 }
 
 .select-control-title {
+  margin-right: 203px;
   font-family: 'Raleway';
   font-style: normal;
   font-weight: 800;
@@ -2360,7 +2361,7 @@ li > a:only-child:after { content: ''; }
   line-height: 19px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  margin-right: 203px;
+
 }
 
 .select-control-list {
@@ -2447,12 +2448,12 @@ li > a:only-child:after { content: ''; }
 
 .product-card-list {
   margin: 0;
-  padding: 70px 40px 44px;
+  padding: 66px 40px 26px;
   width: 840px;
   display: grid;
   grid-template-columns: 360px 360px;
   column-gap: 40px;
-  row-gap: 45px;
+  row-gap: 27px;
   background-color: var(--basic-white);
   list-style: none;
 }
@@ -2499,7 +2500,7 @@ li > a:only-child:after { content: ''; }
 
 .product-card-link {
   width: 360px;
-  height: 452px;
+  min-height: 452px;
   display: block;
   position: relative;
 }
@@ -2521,7 +2522,7 @@ li > a:only-child:after { content: ''; }
 
 .card-button {
   width: 220px;
-  height: 40px;
+  min-height: 40px;
   position: relative;
   font-family: 'Raleway', "Arial", sans-serif;
   font-size: 18px;
@@ -2591,7 +2592,7 @@ li > a:only-child:after { content: ''; }
   margin-bottom: 44px;
   padding-left: 4px;
   width: 760px;
-  height: 55px;
+  min-height: 55px;
   display: block;
   font-family: 'Raleway';
   font-style: normal;
@@ -2626,11 +2627,12 @@ li > a:only-child:after { content: ''; }
 /* пагинация в каталоге */
 
 .column-pagination {
+  margin: 0;
+  padding: 0;
   margin: 44px 40px 78px;
-  padding-top: 25px;
-  padding-bottom: 25px;
   width: 760px;
   height: 71px;
+  box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -2643,7 +2645,7 @@ li > a:only-child:after { content: ''; }
   margin: 0;
   padding: 0;
   width: 128px;
-  height: 71px;
+  min-height: 71px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2692,7 +2694,7 @@ li > a:only-child:after { content: ''; }
 
 .column-pagination-link {
   width: 40px;
-  height: 40px;
+  min-height: 40px;
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -2733,7 +2735,7 @@ li > a:only-child:after { content: ''; }
   padding: 72px 80px;
   margin: auto;
   width: 920px;
-  height: 590px;
+  min-height: 590px;
   overflow: auto;
   position: fixed;
   top: 0;
@@ -2942,7 +2944,7 @@ li > a:only-child:after { content: ''; }
 
 .modal-tooltip {
   width: 200px;
-  height: 160px;
+  min-height: 160px;
   padding: 19px 17px 19px 19px;
   display: none;
   position: absolute;
@@ -2984,7 +2986,7 @@ li > a:only-child:after { content: ''; }
 
 .modal-button {
   width: 60px;
-  height: 60px;
+  min-height: 60px;
   padding: 20px 22px 29px;
   display: inline-block;
   position: relative;
@@ -3037,7 +3039,7 @@ li > a:only-child:after { content: ''; }
   margin: 0;
   padding: 0;
   width: 60px;
-  height: 60px;
+  min-height: 60px;
   display: inline-block;
   box-sizing: border-box;
   font-family: "Rubik";
