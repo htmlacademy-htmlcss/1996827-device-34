@@ -2283,6 +2283,23 @@ li > a:only-child:after { content: ''; }
   line-height: 19px;
 }
 
+/* поведение кнопок фильтра */
+
+.control:hover,
+.control2:hover {
+  opacity: 0.6;
+}
+
+.control:active,
+.control2:active {
+  opacity: 0.3;
+}
+
+.control:disabled,
+.control2:disabled {
+  opacity: 0.1;
+}
+
 /* кнопка фильтра */
 
 .catalog-filter-button {
