@@ -970,6 +970,18 @@ li > a:only-child:after { content: ''; }
   border: 2px solid #B3B3B3;
 }
 
+
+.slider-pagination-item:not(:first-child) .slider-pagination-button:hover {
+  border: 2px solid var(--basic-dark);
+}
+
+.slider-pagination-item:not(:first-child) .slider-pagination-button:active {
+  border: 2px solid #B3B3B3;
+}
+
+
+/* технические параметры */
+
 .slider-pagination-features {
   margin: 0;
   padding: 0;
