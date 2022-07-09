@@ -2545,10 +2545,23 @@ li > a:only-child:after { content: ''; }
 
 .product-card:hover .card-button-container {
   opacity: 1;
+  /* background-color: rgba(255, 255, 255, 0.6); */
 }
 
 .product-card-link:focus {
   outline: 2px solid var(--basic-purple);
+}
+
+.product-card-link:hover .product-card-image {
+  opacity: 0.6;
+}
+
+.product-card-link:hover .product-card-text {
+  opacity: 0.6;
+}
+
+.product-card-link:active .product-card-text {
+  opacity: 0.3;
 }
 
 /* кнокпа загрузить ещё */
