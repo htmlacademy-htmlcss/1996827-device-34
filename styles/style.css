@@ -68,6 +68,7 @@ body {
 }
 
 body {
+  position: relative;
   font-family: "Rubik", sans-serif;
   font-size: 18px;
   line-height: 30px;
@@ -627,8 +628,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
   display: flex;
 }
 
-
-.navigation-rowdown:focus-within .submenu {
+.rowdown-left:focus-within .submenu {
   display: flex;
 }
 
@@ -2728,11 +2728,6 @@ li > a:only-child:after { content: ''; }
 
 /* модальное окно - доставка под заказ */
 
-.body {
-  position: relative;
-}
-
-
 .modal-wrapper {
   width: 100%;
   height: 100%;
@@ -2773,11 +2768,11 @@ li > a:only-child:after { content: ''; }
 
 .close-button {
   display: inline-block;
-  background-color: transparent;
-  border: none;
   position: absolute;
   top: 71px;
   right: 64px;
+  background-color: transparent;
+  border: none;
   fill: var(--basic-black);
 }
 
@@ -2798,29 +2793,26 @@ li > a:only-child:after { content: ''; }
   outline: 2px solid var(--basic-purple);
 }
 
-
 .delivery-form {
   display: grid;
-  /* grid-template-columns: 140px 140px 140px 140px; */
   grid-template-columns: 340px 140px 180px;
   grid-template-areas: "name email email"
                        "text text amt"
                        "button button button";
   column-gap: 40px;
-  /* row-gap: 42px; */
 }
 
 /* имя */
 
 .modal-delivery-name {
-  grid-area: name;
+  margin-top: 37px;
   width: 360px;
   height: 94px;
+  grid-area: name;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  margin-top: 37px;
-  font-family: 'Rubik';
+  font-family: "Rubik";
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
@@ -2858,15 +2850,15 @@ li > a:only-child:after { content: ''; }
 /* email */
 
 .modal-delivery-email {
-  grid-area: email;
   width: 360px;
   height: 90px;
+  margin-top: 37px;
   margin-left: 20px;
+  grid-area: email;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  margin-top: 37px;
-  font-family: 'Rubik';
+  font-family: "Rubik";
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
@@ -2930,14 +2922,14 @@ li > a:only-child:after { content: ''; }
 /* что надо привезти */
 
 .modal-delivery-text {
-  grid-area: text;
+  margin-top: 45px;
   width: 540px;
   height: 94px;
+  grid-area: text;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  margin-top: 45px;
-  font-family: 'Rubik';
+  font-family: "Rubik";
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
@@ -2964,51 +2956,49 @@ li > a:only-child:after { content: ''; }
 /* количество */
 
 .modal-delivery-amt {
-  grid-area: amt;
+  margin-top: 45px;
   width: 180px;
   height: 94px;
+  grid-area: amt;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  margin-top: 45px;
-  font-family: 'Rubik';
+  position: relative;
+  font-family: "Rubik";
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
   letter-spacing: -0.02em;
   margin-left: 20px;
-  position: relative;
 }
 
 .modal-delivery-amt-text  {
   margin-bottom: 9px;
-
 }
 
 .modal-icon {
   position: absolute;
-  /* top: -3px; */
   right: 34px;
 }
 
 /* modal tooltip */
 
 .modal-tooltip {
+  padding: 19px 17px 19px 19px;
   width: 200px;
   min-height: 160px;
-  padding: 19px 17px 19px 19px;
   display: none;
   position: absolute;
   content: "";
   top: 35px;
   left: -28px;
-  z-index: 3;
   font-family: Rubik, sans-serif;
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
   color: var(--basic-white);
   background-color: var(--basic-black);
+  z-index: 3;
 }
 
 .modal-tooltip::before {
@@ -3026,8 +3016,6 @@ li > a:only-child:after { content: ''; }
   display: block;
 }
 
-/* количество */
-
 /* кнопки */
 
 .modal-delivery-wrapper {
@@ -3036,9 +3024,9 @@ li > a:only-child:after { content: ''; }
 }
 
 .modal-button {
+  padding: 20px 22px 29px;
   width: 60px;
   height: 60px;
-  padding: 20px 22px 29px;
   background-color: var(--basic-light);
   fill: var(--basic-black);
   border: none;
@@ -3060,7 +3048,7 @@ li > a:only-child:after { content: ''; }
 }
 
 .modal-button:focus-within {
-  /* z-index: 2; */
+  z-index: 2;
   outline: 2px solid var(--basic-purple);
   outline-offset: 2px;
 }
@@ -3106,10 +3094,10 @@ li > a:only-child:after { content: ''; }
 /* кнопка модалки */
 
 .modal-delivery-button {
-  grid-area: button;
   margin-top: 29px;
   margin-left: 2px;
   width: 200px;
+  grid-area: button;
 }
 
 .modal-delivery-button:hover {
