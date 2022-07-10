@@ -3,15 +3,15 @@
 // модальное окно
 
 let rareButton = document.querySelector('.rare-button');
-let modalDelivery = document.querySelector('.modal-delivery');
+let modalWrapper = document.querySelector('.modal-wrapper');
 let closeButton = document.querySelector('.close-button');
 
 rareButton.onclick = function () {
-	modalDelivery.classList.add('opened');
+	modalWrapper.classList.add('opened');
 };
 
 closeButton.onclick = function () {
-  modalDelivery.classList.remove('opened');
+  modalWrapper.classList.remove('opened');
 };
 
 
