@@ -2461,6 +2461,7 @@ li > a:only-child:after { content: ''; }
 .product-card {
   width: 360px;
   min-height: 452px;
+  position: relative;
 }
 
 .product-card-link {
@@ -2731,32 +2732,37 @@ li > a:only-child:after { content: ''; }
   position: relative;
 }
 
-.modal-delivery {
-  padding: 72px 80px;
-  margin: auto;
-  width: 920px;
-  min-height: 590px;
-  overflow: auto;
+
+.modal-wrapper {
+  width: 100%;
+  height: 100%;
   position: fixed;
+  display: none;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
-  z-index: 999;
-  display: none;
-  background-color: var(--basic-white);
-  border: 10px solid var(--basic-black);
+  overflow: auto;
+  background-color: rgba(240, 240, 240, 0.9);
+  z-index: 3;
 }
 
-.opened {
-  display: block;
+.modal-delivery {
+  margin: auto;
+  padding: 62px 70px;
+  width: 920px;
+  min-height: 568px;
+  box-sizing: border-box;
+  color: var(--basic-black);
+  background-color: var(--basic-white);
+  /* border: 10px solid var(--basic-black); */
+  border: 10px solid var(--basic-warning);
+  box-shadow: 0 10px 0 rgba(0, 0, 0, 0.1);
+  position: relative;
 }
 
 .modal-title {
-  padding: 0;
   margin: 0;
-  margin-bottom: 42px;
-  grid-area: title;
   font-family: 'Raleway';
   font-style: normal;
   font-weight: 800;
@@ -2764,13 +2770,15 @@ li > a:only-child:after { content: ''; }
   line-height: 50px;
 }
 
+/* кнопка закрытия */
+
 .close-button {
   display: inline-block;
   background-color: transparent;
   border: none;
   position: absolute;
-  top: 80px;
-  right: 84px;
+  top: 71px;
+  right: 64px;
   fill: var(--basic-black);
 }
 
@@ -2787,92 +2795,40 @@ li > a:only-child:after { content: ''; }
 }
 
 .close-button:focus-within {
+  padding-top: 4px;
   outline: 2px solid var(--basic-purple);
 }
 
+
 .delivery-form {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-areas: "name name email email"
-                       "text text text amt"
-                       "button button button button";
+  /* grid-template-columns: 140px 140px 140px 140px; */
+  grid-template-columns: 340px 140px 180px;
+  grid-template-areas: "name email email"
+                       "text text amt"
+                       "button button button";
   column-gap: 40px;
-  row-gap: 42px;
+  /* row-gap: 42px; */
 }
+
+/* имя */
 
 .modal-delivery-name {
   grid-area: name;
-}
-
-.modal-delivery-email {
-  grid-area: email;
-}
-
-.modal-delivery-text {
-  grid-area: text;
-}
-
-.modal-delivery-amt {
-  grid-area: amt;
-}
-
-.modal-delivery-button {
-  grid-area: button;
-}
-
-.modal-delivery-name,
-.modal-delivery-email,
-.modal-delivery-text,
-.modal-delivery-amt {
-  margin: 0;
-  padding: 0;
+  width: 360px;
+  height: 94px;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-}
-
-.delivery-form label {
-  margin-bottom: 14px;
-  position: relative;
-  font-family: "Rubik";
+  margin-top: 37px;
+  font-family: 'Rubik';
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
-  line-height: 20px;
   letter-spacing: -0.02em;
 }
 
-/* иконки в полях ввода */
-
-.modal-delivery-name label {
-  position: relative;
-}
-
-.delivery-name-label::after {
-  width: 15px;
-  height: 12px;
-  position: absolute;
-  content: "";
-  top: 57px;
-  left: 305px;
-  background-image: url(../images/icon-user.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.delivery-email-label::after {
-  width: 15px;
-  height: 12px;
-  position: absolute;
-  content: "";
-  top: 57px;
-  left: 335px;
-  background-image: url(../images/icon-email.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.delivery-form input {
+.delivery-name-input {
   padding: 20px;
   width: 100%;
   box-sizing: border-box;
@@ -2883,61 +2839,157 @@ li > a:only-child:after { content: ''; }
   border: none;
 }
 
-.delivery-form input::placeholder {
-  font-family: "Rubik";
+.delivery-name-label {
+  position: relative;
+  padding-bottom: 9px;
+}
+
+.delivery-name-label::after {
+  width: 15px;
+  height: 12px;
+  position: absolute;
+  content: "";
+  top: 64px;
+  left: 325px;
+  background-image: url(../images/icon-user.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* email */
+
+.modal-delivery-email {
+  grid-area: email;
+  width: 360px;
+  height: 90px;
+  margin-left: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  margin-top: 37px;
+  font-family: 'Rubik';
   font-style: normal;
-  font-weight: 400;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: -0.02em;
+}
+
+.delivery-email-input {
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
   font-size: 16px;
   line-height: 20px;
-  color: rgba(0, 0, 0, 0.3);
+  background-color: var(--basic-light);
+  color: var(--basic-black);
+  border: none;
 }
 
-.delivery-form input:hover {
-  background-color: #dcdcdc;
+.delivery-email-label {
+  position: relative;
+  padding-bottom: 9px;
 }
 
-.delivery-form input:focus-within {
-  outline: 2px solid var(--basic-purple);
-  outline-offset: 2px;
+.delivery-email-label::after {
+  width: 15px;
+  height: 12px;
+  position: absolute;
+  content: "";
+  top: 64px;
+  left: 325px;
+  background-image: url(../images/icon-email.svg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 /* ошибка для почты */
 
-.delivery-email:invalid {
+.delivery-email-input:invalid {
   outline: 2px solid var(--basic-error);
   color: var(--basic-black);
 }
 
-.delivery-email:invalid::placeholder {
+.delivery-email-input:invalid::placeholder {
   color: var(--basic-black);
 }
 
-.delivery-email:invalid + .delivery-text {
-  color: var(--basic-error);
-}
-
-.delivery-form input:disabled {
-  outline: 2px solid rgba(0, 0, 0, 0.3);
-}
-
-.delivery-text {
+.delivery-email-input:invalid + .delivery-text {
   font-family: "Rubik";
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
+  color: var(--basic-error);
 }
 
-/* желтый круг */
+/* дизактивируем все поля в форме  */
+
+.delivery-form input:disabled {
+  outline: 2px solid rgba(0, 0, 0, 0.3);
+}
+
+/* что надо привезти */
+
+.modal-delivery-text {
+  grid-area: text;
+  width: 540px;
+  height: 94px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  margin-top: 45px;
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: -0.02em;
+}
+
+.modal-delivery-text-input {
+  margin-top: 8px;
+  padding: 20px;
+  width: 540px;
+  box-sizing: border-box;
+  font-size: 16px;
+  line-height: 20px;
+  background-color: var(--basic-light);
+  color: var(--basic-black);
+  border: none;
+}
+
+.modal-delivery-text-label {
+  position: relative;
+  padding-bottom: 9px;
+}
+
+/* количество */
 
 .modal-delivery-amt {
+  grid-area: amt;
+  width: 180px;
+  height: 94px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  margin-top: 45px;
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: -0.02em;
+  margin-left: 20px;
   position: relative;
+}
+
+.modal-delivery-amt-text  {
+  margin-bottom: 9px;
+
 }
 
 .modal-icon {
   position: absolute;
-  top: -3px;
-  right: 5px;
+  /* top: -3px; */
+  right: 34px;
 }
 
 /* modal tooltip */
@@ -2949,8 +3001,8 @@ li > a:only-child:after { content: ''; }
   display: none;
   position: absolute;
   content: "";
-  top: 33px;
-  left: 0;
+  top: 35px;
+  left: -28px;
   z-index: 3;
   font-family: Rubik, sans-serif;
   font-size: 16px;
@@ -2975,35 +3027,30 @@ li > a:only-child:after { content: ''; }
   display: block;
 }
 
-/* раздел количество */
+/* количество */
+
+/* кнопки */
 
 .modal-delivery-wrapper {
-  width: 180px;
-  position: relative;
   display: flex;
-  align-items: center;
+  box-sizing: border-box;
 }
 
 .modal-button {
   width: 60px;
-  min-height: 60px;
+  height: 60px;
   padding: 20px 22px 29px;
-  display: inline-block;
-  position: relative;
-  z-index: 1;
   background-color: var(--basic-light);
   fill: var(--basic-black);
   border: none;
   cursor: pointer;
 }
 
-.modal-button-plus {
-  padding-top: 23px;
-}
-
 .modal-button svg {
   fill: var(--basic-black);
 }
+
+/* поведение кнопок */
 
 .modal-button:hover {
   background-color: var(--basic-grey);
@@ -3014,7 +3061,7 @@ li > a:only-child:after { content: ''; }
 }
 
 .modal-button:focus-within {
-  z-index: 2;
+  /* z-index: 2; */
   outline: 2px solid var(--basic-purple);
   outline-offset: 2px;
 }
@@ -3025,21 +3072,12 @@ li > a:only-child:after { content: ''; }
   opacity: 0.3;
 }
 
-.modal-number-field:hover {
-  background-color: var(--basic-grey);
-}
-
-.modal-number-field:focus-within {
-  z-index: 2;
-  outline: 2px solid var(--basic-purple);
-  outline-offset: 2px;
-}
+/* цифры */
 
 .modal-number-field {
   margin: 0;
   padding: 0;
   width: 60px;
-  min-height: 60px;
   display: inline-block;
   box-sizing: border-box;
   font-family: "Rubik";
@@ -3050,7 +3088,11 @@ li > a:only-child:after { content: ''; }
   color: var(--basic-black);
   text-align: center;
   appearance: textfield;
+  border: none;
+  background-color: var(--basic-light);
 }
+
+/* знаки в инпуте */
 
 .modal-number-field::-webkit-outer-spin-button,
 .modal-number-field::-webkit-inner-spin-button {
@@ -3058,9 +3100,16 @@ li > a:only-child:after { content: ''; }
   appearance: none;
 }
 
+.modal-number-field {
+  z-index: 1;
+}
+
 /* кнопка модалки */
 
 .modal-delivery-button {
+  grid-area: button;
+  margin-top: 29px;
+  margin-left: 2px;
   width: 200px;
 }
 
@@ -3084,4 +3133,20 @@ li > a:only-child:after { content: ''; }
 .modal-delivery-button:disabled {
   color: #b3b3b3;
   background-color: #fff6d9;
+}
+
+
+.delivery-form input:hover {
+  background-color: #dcdcdc;
+}
+
+.delivery-form input:focus-within {
+  outline: 2px solid var(--basic-purple);
+  outline-offset: 2px;
+}
+
+/* открываем окна через js */
+
+.opened {
+  display: flex;
 }
